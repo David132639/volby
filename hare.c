@@ -17,7 +17,7 @@ int main(){
 		ar[x][0]=i;
 		total+=i;
 	}
-	quota=total/S;
+	quota=(int)ceil(total/(float)S);
 	printf("quota:%i\n",quota);
 	total=0;
 	for (x=0; x<P; x++){
