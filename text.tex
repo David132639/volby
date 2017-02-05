@@ -8,18 +8,64 @@
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{lmodern}
-%\usepackage{csquotes}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{csquotes}
+\DeclareQuoteStyle[quotes]{czech}
+  {\quotedblbase}
+  {\textquotedblright}
+  [0.05em]
+  {\quotesinglbase}
+  {\fixligatures\textquoteright}
+\DeclareQuoteAlias[quotes]{czech}{czech}
+\DeclareQuoteOption{czech}
 \usepackage[backend=biber, style=numeric, citestyle=numeric]{biblatex}
 \addbibresource{citace.bib}
 \usepackage{indentfirst}
 \linespread{1.5}
 \usepackage[left=2.5cm,right=2cm,top=2.5cm,bottom=2cm]{geometry}
-\author{David Zacek}
-\title{Volby a matematika}
+
+\makeindex
 \begin{document}
+\begin{titlepage}
+	\begin{center}
+	{\large Gymnázium Christiana Dopplera, Zborovská 45, Praha 5 \par}
+	\vfill
+	\par\vspace{1cm}
+	{\scshape\LARGE ROČNÍKOVÁ PRÁCE \par}
+	{\huge\bfseries Volby a matematika\par}
+	\vfill
+\end{center}
+Vypracoval: David Žáček \\
+Třída: 8. C \\
+Školní rok: 2016/2017 \\
+Seminář : Matematický seminář \\
+	\vfill
+\end{titlepage}
+
+\vspace*{\fill}
+\begin{quote}
+Prohlašuji, že jsem svou ročníkovou práci napsal samostatně a výhradně s
+použitím 
+citovaných pramenů. Souhlasím s
+využíváním 
+práce na Gymnáziu Christiana Dopplera 
+pro studijní účely. \\
+\end{quote}
+
+V Praze dne \today \hfill David Žáček
+
+\vspace*{\fill}
+\thispagestyle{empty}
+\newpage
+\tableofcontents
+\newpage
 \section{Uvod}
 Cilem teto prace je analyzovat soucasny volebni system v CR a navrhnout jeho upravy, ktere by ho udelali spravedlivejsim. 
-Volebnim systemem budu v teto praci nazyvat postup, dle ktereho je mozne mezi strany ucastnici se voleb rozdelit na zaklade poctu hlasu ktere obdrzely nedelitelne mandaty ve volenem sboru.
+Volebnim systemem budu v teto praci nazyvat postup, dle ktereho je mozne mezi strany ucastnici se voleb rozdelit na zaklade poctu hlasu ktere obdrzely nedelitelne mandaty ve volenem sboru. 
+Nebude zde zkoumana umela hranice, pod kterou nejsou hlasy strany zapocitavany, u nas znama jako \uv{petiprocentni hranice}.
+Tato hranice existuje ve vetsine statu ktere vyuzivaji pomerovy system a byla predmetem mnoha zkoumani a teto prace se bude venovat jinym otazkam.
+Hlasy pro strany ktere hranice nedosahly budou tedy v praci povazovany za neplatne.
 Tyto systemu mohou ale byt analogicky pouzity i v dalsich situacich, nebot zobecnene jde o rozdeleni k nedelitelnych objektu mezi n subjeku, s tim ze kazdy subjekt ma ciselne ohodnoceni a rozdeleni by melo byt provedeno tak, aby pomer obdrzenych objeku a vlastniho ohodnoceni kazdeho subjektu byl co nejpodobnejsi. 
 
 \section{Deleni volebnich systemu}
@@ -118,6 +164,23 @@ Pro kvotu $\dfrac{H}{N+1}$ se kvota vejde do celkoveho poctu hlasu presne $N+1$ 
 Slozitejsi otazkou je maximalni hodnota kvoty.
 Pro kvotu blizici se nekonecnu by vsechny strany dosltali nejprve nulu a pak $N$ s nejvyssim ziskem po jednom mandatu.
 
+%TODO The Alabama Paradox The Population Paradox The New States Paradox
+
+\section{Volby v krajich}
+V mnoha statech se ale rozdelovani dle vyse popsanych metod neprobiha na celostatni urovni, ale oddelene v jednotlivych oblastech.
+Smysl tohoto opatreni je, ze obcane maji sve \uv{mistni} zastupce.
+Bezne to v praxi funguje tak, ze podle celkoveho poctu hlasu odevzdanych v kazde oblasti, se celkovy pocet kresel nejprve rozdeli mezi jednotlive oblasti.
+V kazde z techto oblasti je prideleny pocet mandatu rozdelovan oddelene dle vyse rozebranych pravidel.
+Nektere staty rozdelovani neprovadi naprosto oddelene, ale castecne oddelene.
+Prikladem muze byt nize vysvetleny system kterym se v CR volil parlament az do roku 2000. % zdroj: zakon
+Toto rozdelovani v oblastech side dava volicum \uv{mistni} zastupce, ma ale zasadni nevyhodu.
+Male oblasti vedou k naruseni pomerovosti systemu.
+V extremnim pripade oblasti kde je volen vzdy jeden zastupce jde o vyse popsany vetsinovy system. 
+Ale i vetsi oblasti pomerovost narusi.
+Pokud je v oblasti rozdelovano deset kresel, pripada kazde na asi deset procent hlasu.
+Pro stranu se ziskem sedm procent je pak
+  
+
 \section{Vyvoj volebniho systemu v CR}
 Volebnni system Ceske republiky s vyjimkou zavedeni prime volby prezidenta republiky prosel posledni zmenou kolem roku 2000.
 Do te byly mandaty ve snemovnich volbach rozdelovany tak, ze kazdemu z 8 volebnich kraju byl udelen pocet mandatu k rozdeleni podle celkoveho poctu hlasu v danem kraji.
@@ -139,7 +202,34 @@ Byla zrusena uprava d'Hondtovy metody a volebni kraje byly sjednoceny se samospr
 Tato uprava vydrzela dodnes.
 
 \section{Pomerovost soucasneho systemu}
-      
+V teto casti budeme zkoumat vysledky voleb z roku 2006. 
+%zdroj dat?
+Tyto volby totiz ukazaly nektere zvastni vlastnosti ceskeho volebniho systemu.
+Vysledky voleb byly nasledujici:
+
+\begin{center}
+\catcode`\-=12
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+\multirow{2}{*}{Strana}  & \multicolumn{2}{|c|}{Skutecne Vysledky} & \multirow{2}{*}{Teoreticke mandaty} & \multicolumn{4}{|c|}{Rozdeleni dle ruznych metod} \\ \cline{2-3} \cline{5-8}
+& Hlasy & Mandaty & & d'Hondt & Adams & Hare & Droop \\  
+\hline
+ODS & 1892475 & 81 & 75.25 & 76 & 75 & 75 & 76 \\ 
+\hline
+ČSSD & 1728827 & 74 & 68.74 & 69 & 68 & 69 & 69 \\ 
+\hline
+SZ & 336487 & 6 & 13.38 & 13 & 14 & 14 & 13 \\ 
+\hline
+KSČM & 685328 & 26 & 27.25 & 27 & 27 & 27 & 27 \\ 
+\hline
+KDU-ČSL & 386706 & 13 & 15.38 & 15 & 16 & 15 & 15 \\ 
+\hline
+\end{tabular} 
+\end{center}
+
+Jak je nazorne vydet rozdeleni mandatu jak ho preovedl cesky volebni system neodpovida poctu obdrzenych hlasu. 
+
+
 \printbibliography 
 
 \end{document}
