@@ -144,6 +144,8 @@ Q ale muzeme z vypoctu vypustit uplne, nebot vime ze pokud kazda strana dostane 
 Pak strana ktera ma Q mezi svymi pomery ziska posledni N-te kreslo.
 Podobne lze vypocitat rozdeleni Sainte Lague pomoci rady $0{,}5, 1{,}5, 2{,}5$, Adams... %TODO
 
+%TODO SLucovani dle d'Hondta, SL a Adamse
+
 \subsection{Metody nejvetsiho zbytku}
 Druha skupina metod jsou metody nejvyssiho zbytku.
 Tyto metody vyuzivaji takzvne kvoty.
@@ -179,7 +181,7 @@ V extremnim pripade oblasti kde je volen vzdy jeden zastupce jde o vyse popsany 
 Ale i vetsi oblasti pomerovost narusi.
 Pokud je v oblasti rozdelovano deset kresel, pripada kazde na asi deset procent hlasu.
 Pro stranu se ziskem sedm procent je pak
-  
+%TODO Porovnani metod na volbach s mnoha mandaty > podobnost, s malo mandaty > znacne rozdily
 
 \section{Vyvoj volebniho systemu v CR}
 Volebnni system Ceske republiky s vyjimkou zavedeni prime volby prezidenta republiky prosel posledni zmenou kolem roku 2000.
@@ -226,10 +228,89 @@ KDU-ČSL & 386706 & 13 & 15.38 & 15 & 16 & 15 & 15 \\
 \hline
 \end{tabular} 
 \end{center}
+%TODO volebni pat?
+Jak je nazorne vydet rozdeleni mandatu jak ho preovedl cesky volebni system neodpovida poctu obdrzenych hlasu.
+Tento rozdil je zpusoben vyse zminenym rozdelovanim mandatu v oblastech.
+V soucasnem ceskem systemu je oblasti kazdy samospravny kraj.
+Lide v kazdem kraji voli sve poslance za \uv{svuj}kraj.
+Pro prozkoumani vyse zminenych vysledku tedy volby dvakrat prepocitame, jednou tak, jako kdyby republiku tvorilo 8 kraju o 25 mandatech (volebne nejvetsi kraj Praha) a kdyby ho tvorilo 40 kraju o 5 mandatech (volebne nejmensi kraj Karlovarsky).
+Budeme predpokladat ze v kazdem kraji je pomer hlasu stejny jako celostatne.
 
-Jak je nazorne vydet rozdeleni mandatu jak ho preovedl cesky volebni system neodpovida poctu obdrzenych hlasu. 
 
 
-\printbibliography 
+2 \& 80\\
+2 \& 80\\
+0 \& 0\\
+1 \& 40\\
+0 \& 0\\
+\\
+1\\
+1\\
+1\\
+1\\
+1\\
+
+
+10\& 80 \\
+9 \& 72\\
+1 \& 8\\
+3 \& 24\\
+2 \& 16\\
+
+9\\
+8\\
+2\\
+4\\
+2\\
+
+Kdyz porovname tyto vysledky s vysledky celostatnimi, je videt ze deleni republiky na kraje znamena, ze zpusob rozdelovani mandatu haje zasadni roli.
+Pri celostatnim vyhodnoceni se metody lisi maximalne o jeden madnat, narozdil od propastnych rozdilu pri deleni v krajich.
+Zde vznioka vyse nelogicky vypadajici mezi ziskem mandatu teoretickym na celostatni urovni a slozenim parlamentu jak ho vytvoril volebni system.
+
+\section{Mozne upravy}
+\subsection{Celostatni rozdelovani}
+Slovensko se vyse zminenych problemu zbavilo tak, ze jejich volby probihaji celostatne.
+Jak bylo videt vyse, pri celostatnim rozdelovani mandatu je volba metody jiz otazkou nekolika malo mandatu.
+Nevyhoda pro volice je, ze kazdy dostava kandidatni listinu o 150 kandidatech (i kdyz to je dano spise optimismem politickych stran nez podpbou systemu) a nema \uv{sve} poslance.
+I kdydz toto muzeme povazovat za reseni problemu, podivejme se, jestlki by bylo mozne zachovat oblastni rozdelovani mandatu.
+\subsection{Jiny zpusob deleni mandatu v krajich}
+Jak bylo zmineno vyse  %potreba pridat do teoretickeho uvodu
+d'Hondtova metoda neni povazovana za nejvice pomerovou.
+SL je v tomto ohlodu hodnocena jako jedna z nejlepsich metod % zdroje
+takze moznym zlepsenim situace je zavedeni teto metody misto metody d'Hondtovy.
+Problemem je ze v krajich jako je Karlovarsky neni rozdeleni ktere by presne odpovidalo rozdeleni hlasu casto vubec mozne.
+Strana s 10 procenty hlasu nemuze dostat nic blizsiho svemu zisku nez 0 nebo 20 procent kresel.
+Pohou zmenou metody tedy problem resit nelze. 
+\subsection{NUTS 2 kraje}
+Jakl bylo vyse popsane, cim mensi kraj tim tezsi je v nem dosahnout pomerneho rozdeleni.
+Dalsi moznosti uporavy systemu je tedy zvetseni volebnich oblasti.
+Vytvoreni oblasti ktere by slouzili jen pro volby by ale melo nekolik problemu.
+Prvni z neich je ze se ztraci puvodni vyznam voleb v krajich, tedy to aby volice zastupovali \uv{jejich} mistni zastupci s kterymi se ztotozkuji.
+Umele rozdeleni republiky na \uv{volebni kraje} muze ale take vest k politickym bojum o jejich hranice a pocet. % zdroj o gerrymandering
+Je proto praktictejsi aby se volebni kraje shodovali s jiz existujicimi hranicemi.
+Nabizi se pouzit NUTS 2 regiony, jak je uzivaji Evropske i Ceske instituce vcetne Ceskeho statictickeho uradu.
+%https://www.czso.cz/documents/11244/43384376/NUTS2_CR_2015.pdf/8f87a03e-bd06-4bd1-9fbe-ae6578b5ede4?redirect=https%3A%2F%2Fwww.czso.cz%2Fcsu%2Fczso%2Fcri%2Fpohyb-obyvatelstva-4-ctvrtleti-2015%3Fp_p_id%3D3%26p_p_lifecycle%3D0%26p_p_state%3Dmaximized%26p_p_mode%3Dview%26_3_groupId%3D0%26_3_keywords%3Dnuts%26_3_struts_action%3D%252Fsearch%252Fsearch%26_3_redirect%3D%252Fweb%252Fczso%252Fkatalog-produktu-vydavame
+Kazdy z techto regionu je tvoren jednim nebo vice kraji.
+Je jich 8 a kazdy z nich ma vice nez 1,1 milionu obyvatel.
+Ani toto ale neresi vsechny problemy.
+Jak bylo ukazano vyse ani regiony velikosti Prahy (Praha je jednim z NUTS 2 regionu), nejsou zarukou pomerovosti.
+Takto velike regiony by se ale pri spravne zvolene metode deleni mansatu mohly pomerovosti blizit, ale stale jsou jeste prilis male na to aby presne odpovidaly poctum hlasu.
+Navic zde opet narazime na neplneni puvodniho umysl, vytvoreni oblasti se kterymi volici citi spojenost.
+\subsection{Rozdelovani mandatu stran do kraju}
+Reseni ktere by autor teto prace chtel predlozit je rozdelit mandaty na celostatni mandaty a ziskat tak rozlozeni sil v parlamentu ktere by presne odpovidalo pomerum hlasu ktere byly odevzdany ve volbach.
+Mandaty kazde strany by se pak delili mezi kandidaty v jednotlivych krajich podle poctu hlasu pro strany v jednotlivych krajich.
+Tento system by zarucoval ze hlasy stranam ktere se dostanou do parlamentu by v zadnem kraji nebyly irrelevantni, jak tomu ted je u stran s malym ziskem v malych krajich. 
+Zachovala by se prislusnost zvolenych poslancu krajum.
+Tento postup ma ale take sve nevyhody.
+Problem deleni maleho poctu mandatu mezi strany se promenil mezi deleni maleho poctu mandatu mezi kraje.
+To uz ale neovlivnuje vysledek voleb tak jak ho zname, tedy rodeleni kresel stranam.
+
+%TODO metoda deleni mandatu mezi kraje
+%TODO vysledky spocitane navrhovanym systemem
+
+\section{Zaver}
+
+\section{Reference}
+\printbibliography[heading=none]
 
 \end{document}
