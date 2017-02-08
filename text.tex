@@ -1,4 +1,4 @@
-\documentclass[12pt,a4paper]{article}
+\documentclass[12pt,a4paper]{report}
 \usepackage[utf8]{inputenc}
 \usepackage[czech]{babel}
 \usepackage[T1]{fontenc}
@@ -60,8 +60,9 @@ V Praze dne \today \hfill David Žáček
 \newpage
 \tableofcontents
 \newpage
-\section{Uvod}
-Cilem teto prace je analyzovat soucasny volebni system v CR a navrhnout jeho upravy, ktere by ho udelali spravedlivejsim. 
+\chapter{Uvod}
+\section{Cile}
+Cilem teto prace je analyzovat soucasny volebni system  pro volby so PSP CR a navrhnout jeho upravy, ktere by ho udelali spravedlivejsim. 
 Volebnim systemem budu v teto praci nazyvat postup, dle ktereho je mozne mezi strany ucastnici se voleb rozdelit na zaklade poctu hlasu ktere obdrzely nedelitelne mandaty ve volenem sboru. 
 Nebude zde zkoumana umela hranice, pod kterou nejsou hlasy strany zapocitavany, u nas znama jako \uv{petiprocentni hranice}.
 Tato hranice existuje ve vetsine statu ktere vyuzivaji pomerovy system a byla predmetem mnoha zkoumani a teto prace se bude venovat jinym otazkam.
@@ -91,23 +92,22 @@ Procenta sice s vysledky voleb presne neodpovidaji, ale jde o mnohem lepsi repre
 Zde je videt jedna z vlastnosti pomeroveho zastoupeni, cim vice zastupitelu se voli, tim lepe mohou vysledky pri rozdfelovani zastupitelstva odpovidat nazorum obyvatelstva.
 Pokud pro dane rozlozeni sil budeme volit nasledujici pocty zastupitelu, budou odchylky od \uv{spravneho} zisku:
 
-\section{Pravy pomerovy system} %TODO definovat
-
 \section{Historie}
-Matematicka teorie pomerneho rozdeleni mandatu ale saha ke zrodu demokratickeho zrizeni ktere dodnes vyuziva systemu vetsinoveho.
-Na konci 18.
-stoleti vznikaly spojene staty americke.\autocite{BAL2}
+Matematicka teorie pomerneho rozdeleni mandatu ale saha ke zrodu Spojenych statu Americkych, demokratickeho zrizeni ktere dodnes vyuziva systemu vetsinoveho.\autocite{BAL2}
 Protoze vznikaly jako spolecenstvi 13 existujicich statu, bylo jiz od prvnich chvil zasadnim tematem vliv jednotlivych statu ve vznikajicim state, lepe receno pomer vlivu malych a vekych statu.
-Ze snah vyrovnat vliv vychazi mnoho prvku americkeho politickeho systemu ktere prezivaji dodnes, napriklad Sbor volitelu, 2 clenove senaru pro kazdy stat... 
 Pro nas nejzajimavejsim tematem je rozdeleni kresel ve Snemovne reprezenatntu, dolni komore americkeho zakonodarneho Congressu.
 Dle americke ustavy prijate 1878 ziskavaji staty representatnty podle poctu obyvatel.
 Svobodny clovek se pocital za jednoho obyvatele, otrok za 3/5 obyvatele a indiani nebyly pocitani vubec.
 Ustava ale presny postup deleni nestanovila.
 Ve vysledku tedy ziskaly politici spojenych statu stejnou ulohu jako pozdejsi deleni kresel mezi strany dle poctu hlasu, ale slo o deleni kresel statum dle poctu obyvatel. 
-Uloha ktery se mohla na prvni pohled zdat az trivialne lehka budila kontroverze po dalsich vice nez 150 let.
+Uloha ktery se mohla na prvni pohled zdat az lehka budila kontroverze po dalsich vice nez 150 let.
 Byla duvodem uziti vubec prvniho americkeho prezidentskeho veta kdyz Geroge Washington nesouhlasil se zpusobem rozdeleni ktery znevyhodnoval oproti konkurencnimu navrhu jeho rodnou Virginii.
 Az v polovine 20. stoleti doslo k dlouhodobemu ustaleni metody vypoctu.
-Mezitim ale bylo pouzivano hned nekolik ruznych metod deleni. %TODO
+Pozdeji, kdyz v Evrope vzikla potreba resit ekvivvalentni problem,...
+
+\chapter{Teoreticky popis metod deleni mandatu}
+
+\section{Pravy pomerovy system} %TODO definovat
 
 \section{Jednotlive metody}
 Prestoze vetsina nasledujicich metod byla prvne vymyslena americkymi matematiky, budu pouzivat pro vysvetleni pojmy strana, a hlas a v evrope bezne pouzivane nazvy.
@@ -115,11 +115,11 @@ Zaroven predpokladam naprostou ze zadne zisky stran jsou tokove, ze nedojde ke s
 
 \subsection{Metody Nejvyssich prumeru}
 Prvni skupinou metod deleni mandatu jsou takzvane metody nejvyssich prumeru.
-Tyto metody funguji tak, ze kazda strana ziskava hlasy podle podilu hlasu ktere obdezela a nezname Q.
-Tyto podily jou vsechny zaokrouleny stejnym zpusobem, kazda z metod v teto skupine je charakterizovana svou zaokrouhlovaci metodou.
+Tyto metody funguji tak, ze kazda strana ziskava hlasy podle podilu hlasu ktere obdezela a promene Q.
+Tyto podily jsou vsechny zaokrouleny stejnym zpusobem, kazda z metod v teto skupine je charakterizovana svou zaokrouhlovaci metodou.
 Q je urceno tak, aby celkovy rozdeleny pocet mandatu byl roven poctu clenu voleneho zastupitelstva.
-Dve nejpouzivanejsi metody z teto zkupiny jsou d'Hondtova, ktera vzdy zaokrouhluje dolu a Sainte-Lague, ktera zaokrouhluje dle beznych pravidel zaokrouhlovani.
-Tyto metody tvori spektrum od d'Hondtovy po Adamsovu, ktera vzdy zaokrouhluje dolu.
+Dve nejpouzivanejsi metody z teto zkupiny jsou d'Hondtova, ktera vzdy zaokrouhluje dolu a Sainte-Lague, ktera zaokrouhluje dle beznych aritmetickych pravidel zaokrouhlovani.
+Tyto metody tvori spektrum od d'Hondtovy metody po Adamsovu, ktera vzdy zaokrouhluje dolu. %TODO Dukaz meznosti Adamse a d'Hondta pro pomerovost
 Adamsova metoda garantuje kreslo kazde strane s alespon jednim hlasem, zatimco d'Hondtova metoda garantuje kreslo az za XXX hlasu.
 
 Matematicky lze tyto metody definovat nasledovne:
@@ -131,20 +131,26 @@ a
 $$k_{x}=[\dfrac{h_{x}}{Q}]$$ kde $Q$ je realne cislo zvolene tak, aby $$N=\sum_{n=1}^{x} (k_{n})$$ 
 
 Q libovolne splnujici podminky vytvori stejny vysledek. %TODO dokazat
-Pro d'Hondtovu metodu je $[]$ dolni cela cast.
-Pro metodu Sainte-Lague je $[]$ zaokrouhleni dle aritmetickych pravidel.
-Pro Adamsovu metodu je $[]$ dolni cela cast.
+Pro d'Hondtovu metodu je $[ ]$ dolni cela cast.
+Pro metodu Sainte-Lague je $[ ]$ zaokrouhleni dle aritmetickych pravidel.
+Pro Adamsovu metodu je $[ ]$ dolni cela cast.
 
 Pro tyto metody existuje alternativni zpusob vypoctu.
 Ten nejprve vysvetlime pro d'Hondtovu metodu.
 Pro kazdou stranu je vypocitan podil jejich hlasu postupne se vsemi prirozenymi cisly od 1 do poctu rozdelovanych mandatu.
 Tyto pomery kazde strany urcuji jake maximalni Q jim zajisty dany pocet mandatu (prvni pomer strany dava jeden mandat, druhy pomer dva mandaty...).
-Pokud tedy je za Q zvoleno N-te nejvyssi cislo mezi pomery vsech stran, bude Q zvoleno spravne.
-Q ale muzeme z vypoctu vypustit uplne, nebot vime ze pokud kazda strana dostane jeden mandat za kazdy jejich vypocteny pomer vyssi nez N-te nejvyssi cislo, rozdeleno bude N-1 kresel.
-Pak strana ktera ma Q mezi svymi pomery ziska posledni N-te kreslo.
+
+Pokud tedy je za Q zvoleno N-te nejvyssi cislo mezi vypoctenymi pomery vsech stran, bude Q zvoleno spravne.
+Q ale muzeme z vypoctu vypustit uplne, nebot vime ze pokud kazda strana dostane jeden mandat za kazdy jejich vypocteny pomer vyssi nez nebo roven N-temu nejvyssimu cislu, rozdeleno bude N kresel.
 Podobne lze vypocitat rozdeleni Sainte Lague pomoci rady $0{,}5, 1{,}5, 2{,}5$, Adams... %TODO
 
-%TODO SLucovani dle d'Hondta, SL a Adamse
+Zajimave je jak se jednotlive systemy chovaji pokud by se trany pred volbami sloucili, v tomto teoretickem pripade tak, ze nova strana ziska soucet hlasu puvodnich stran.
+U vyse zmineneho pomeroveho systemu ma samozdrejme strana s vetsim procentnim ziskem vetsi sanci mit v dane oblasti nejvice hlasu.
+U metod nejvyssich prumeru je ale situace trochu slozitejsi.
+Nejprve se podivejme na d'Hondovu metodu.
+
+
+
 
 \subsection{Metody nejvetsiho zbytku}
 Druha skupina metod jsou metody nejvyssiho zbytku.
@@ -156,12 +162,15 @@ Diky vyberu kvoty (jak bude dale vysvetleno) muzou byt rozdeleny budto vsechny m
 Pokud je jich rozdeleno mene, ziskavaji zbyle mandaty po jednom strany s nejvetsim zbytkem po deleni poctu ziskanych hlasu kvotou.
 Existuji i kvoty ktere nezarucuji ze mandaru nebude rozdeleno vice nez ma, ty pak odebiraji mandaty stranam s nejmensim zbytkem.
 Tyto kvoty se ale pouzivaji zridka.
-Nejasnoo otazkou techto systemu je zpusob urceni kvoty.
+Nejasnou otazkou techto systemu je zpusob urceni kvoty.
 Kvota se vzdy urcuje dle celkoveho souctu hlasu a poctu volenych zastupitelu.
 Minimalni kvotu lze definovat snadno, nesmi dovolit zisk vice mandatu nez ma byt rozdeleno.
 Tato kvota se naziva Drooopova, a je definovana jako prvni prirozene cislo vetsi nez $\dfrac{H}{N+1}$ kde $H$ je soucet vsech hlasu a $N$ pocet rozdelovanych mandatu.
 Tuto kvotu lze odvodit nasledovne: Celkove muze byt (bez dorozdelovani dle zbytku) rozdeleno maximalne tolik mandatu, kolikrat se kvota cela vejde do celkoveho poctu hlasu.
 Pro kvotu $\dfrac{H}{N+1}$ se kvota vejde do celkoveho poctu hlasu presne $N+1$ krat, pokud se kvota zvysi, uz se do celkoveho poctu hlasu $N+1$ krat nevejde, vejde se tedy maximalne $N$, maximalne muze byt rozdeleno $N$ mandatu.
+
+Druhou pouzivanou kvoto je kvota Hareova, nekdy take nazyvana prirozena kvota. Ta je rovna pomeru celkoveho poctu hlasu a poctu udelovanych mandatu.
+Strany s mensim volebnim ziskem vetsinou Ziskaji pri pouziti Hareovy kvoty vice mandatu nez pri uziti Droopovy.  
 
 Slozitejsi otazkou je maximalni hodnota kvoty.
 Pro kvotu blizici se nekonecnu by vsechny strany dosltali nejprve nulu a pak $N$ s nejvyssim ziskem po jednom mandatu.
@@ -183,7 +192,9 @@ Pokud je v oblasti rozdelovano deset kresel, pripada kazde na asi deset procent 
 Pro stranu se ziskem sedm procent je pak
 %TODO Porovnani metod na volbach s mnoha mandaty > podobnost, s malo mandaty > znacne rozdily
 
+\chapter{Volebni systemy v praxi}
 \section{Vyvoj volebniho systemu v CR}
+% Zdroj, volebni zakon https://www.zakonyprolidi.cz/cs/1995-247
 Volebnni system Ceske republiky s vyjimkou zavedeni prime volby prezidenta republiky prosel posledni zmenou kolem roku 2000.
 Do te byly mandaty ve snemovnich volbach rozdelovany tak, ze kazdemu z 8 volebnich kraju byl udelen pocet mandatu k rozdeleni podle celkoveho poctu hlasu v danem kraji.
 V techto krajich pak byl byly tyto mandaty rozdeleny podle Hagenbach-Bishoffovy kvoty (kvota nezarucujici maximalne N rozdelenych mandatu).
@@ -267,13 +278,14 @@ Kdyz porovname tyto vysledky s vysledky celostatnimi, je videt ze deleni republi
 Pri celostatnim vyhodnoceni se metody lisi maximalne o jeden madnat, narozdil od propastnych rozdilu pri deleni v krajich.
 Zde vznioka vyse nelogicky vypadajici mezi ziskem mandatu teoretickym na celostatni urovni a slozenim parlamentu jak ho vytvoril volebni system.
 
-\section{Mozne upravy}
-\subsection{Celostatni rozdelovani}
+\chapter{Mozne upravy a zaver}
+
+\section{Celostatni rozdelovani}
 Slovensko se vyse zminenych problemu zbavilo tak, ze jejich volby probihaji celostatne.
 Jak bylo videt vyse, pri celostatnim rozdelovani mandatu je volba metody jiz otazkou nekolika malo mandatu.
 Nevyhoda pro volice je, ze kazdy dostava kandidatni listinu o 150 kandidatech (i kdyz to je dano spise optimismem politickych stran nez podpbou systemu) a nema \uv{sve} poslance.
 I kdydz toto muzeme povazovat za reseni problemu, podivejme se, jestlki by bylo mozne zachovat oblastni rozdelovani mandatu.
-\subsection{Jiny zpusob deleni mandatu v krajich}
+\section{Jiny zpusob deleni mandatu v krajich}
 Jak bylo zmineno vyse  %potreba pridat do teoretickeho uvodu
 d'Hondtova metoda neni povazovana za nejvice pomerovou.
 SL je v tomto ohlodu hodnocena jako jedna z nejlepsich metod % zdroje
@@ -281,7 +293,7 @@ takze moznym zlepsenim situace je zavedeni teto metody misto metody d'Hondtovy.
 Problemem je ze v krajich jako je Karlovarsky neni rozdeleni ktere by presne odpovidalo rozdeleni hlasu casto vubec mozne.
 Strana s 10 procenty hlasu nemuze dostat nic blizsiho svemu zisku nez 0 nebo 20 procent kresel.
 Pohou zmenou metody tedy problem resit nelze. 
-\subsection{NUTS 2 kraje}
+\section{NUTS 2 kraje}
 Jakl bylo vyse popsane, cim mensi kraj tim tezsi je v nem dosahnout pomerneho rozdeleni.
 Dalsi moznosti uporavy systemu je tedy zvetseni volebnich oblasti.
 Vytvoreni oblasti ktere by slouzili jen pro volby by ale melo nekolik problemu.
@@ -296,7 +308,7 @@ Ani toto ale neresi vsechny problemy.
 Jak bylo ukazano vyse ani regiony velikosti Prahy (Praha je jednim z NUTS 2 regionu), nejsou zarukou pomerovosti.
 Takto velike regiony by se ale pri spravne zvolene metode deleni mansatu mohly pomerovosti blizit, ale stale jsou jeste prilis male na to aby presne odpovidaly poctum hlasu.
 Navic zde opet narazime na neplneni puvodniho umysl, vytvoreni oblasti se kterymi volici citi spojenost.
-\subsection{Rozdelovani mandatu stran do kraju}
+\section{Rozdelovani mandatu stran do kraju}
 Reseni ktere by autor teto prace chtel predlozit je rozdelit mandaty na celostatni mandaty a ziskat tak rozlozeni sil v parlamentu ktere by presne odpovidalo pomerum hlasu ktere byly odevzdany ve volbach.
 Mandaty kazde strany by se pak delili mezi kandidaty v jednotlivych krajich podle poctu hlasu pro strany v jednotlivych krajich.
 Tento system by zarucoval ze hlasy stranam ktere se dostanou do parlamentu by v zadnem kraji nebyly irrelevantni, jak tomu ted je u stran s malym ziskem v malych krajich. 
