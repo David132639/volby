@@ -53,7 +53,7 @@ V Praze dne \today \hfill David Žáček
 \newpage
 \chapter{Uvod}
 \section{Cile}
-Cilem teto prace je analyzovat soucasny volebni system  pro volby do PSP CR a navrhnout jeho upravy, ktere by ho udelali spravedlivejsim. 
+Cilem teto prace je analyzovat soucasny volebni system  pro volby do Poslanecke snemovny Parlamentu Ceske republiky a navrhnout jeho upravy, ktere by ho udelali spravedlivejsim. 
 Volebnim systemem budu v teto praci nazyvat postup, dle ktereho se mezi strany ucastnici se voleb rozdeluji mandaty na zaklade poctu hlasu ktere obdrzely. 
 Nebude zde zkoumana umela hranice pro zahrnuti strany do rozdelovani mandatu, u nas znama jako \uv{petiprocentni hranice}.
 \footnote{Petiprocentni hranice ve skutecnosti neni zcela presny nazev. Hranice je jednak vyssi pro koalice stran, atake muze byt snizena pokud by ji neprekrocili alespon dve strany.\autocite{ZAK}}
@@ -64,7 +64,7 @@ I kdyz budou zkoumany volby v CR, mohou zavery byt aplikovany i v jinych statech
 Volebni systemy lze delit na vetsinove a pomerove. Vetsinove systemy jsou ty, ktere se ptaji pouze na otazku, kdo ma nejvic a jsou nezavisle na poctech hlasu dalsich kandidatu.
 Vitezi pouze ten s nejvetsim poctem hlasu.
 Pro volbu vetsiho poctu osob se zpravila voli kazda disjunktni skupina obyvatel sveho jednoho zastupce.
-\footnote{Existuje i moznost aby zvoleno bylo v oblasti vice kandidatu s njvice hlasy, to se deje napriklad pri volbach ve state Tuvalu.\autocite{TUV}}
+\footnote{Existuje i moznost aby zvoleno bylo v oblasti vice kandidatu s nejvice hlasy, to se deje napriklad pri volbach ve state Tuvalu.\autocite{TUV}}
 Prikladem vetsinoveho systemu jsou parlamentni volby v UK a USA, kde kazdou oblast reprezentuje ten kandidat, ktery v ni ziskal nejvice hlasu.
 Tento postup ma ale pomerne zasadni vadu, zcela ignoruje velke mnozstvi hlasu.
 To lze demonstrovat na hypotetickem na prikladu. Ve volbach se o prizen volicu uchazi pet nazoru na fungovani zeme, ktere budu oznacovat A az E.
@@ -84,7 +84,9 @@ Zisky stran z hlediska poslancu jsou tedy 25\% pro A az C a 12.5\% pro D a E.
 Procenta sice vysledkum voleb presne neodpovidaji, ale jde o mnohem lepsi reprezentaci nez u vetsinoveho vysledku kde vsechny zastupitele ziskalo A.
 Pri volbe vice poslancu by vysledky odpovidaly jeste presneji, lze si vsimnout ze jednoho ani pet poslancu nelze \uv{ferove} rozdelit mezi 5 stran tak aby odpovidali procenta zisku hlasu a zisku mandatu.
 Pri rozdelovani stovek poslancu uz pujde jen o male rozdily mezi zminenymi procenty.
-Navic, jak ukazal Gallagher, metody rozdelovani (ktere budou vysvetleny nize) pri velkem mnozstvi rozdelovanych mandatu konverguji.\autocite{GAL1}   
+Navic, jak ukazal Gallagher, metody rozdelovani (ktere budou vysvetleny nize) pri velkem mnozstvi rozdelovanych mandatu konverguji.\autocite{GAL1}
+To jak se procento ziskanych mandatu  blizi procentu ziskanych hlasu bude dale v praci nazyvano pomerovosti systemu.
+I kdyz existuji numericke indexy pomerovosti, lisi se stale nazor na jejich vyznam a tak be v praci vyuzita intuitivni definice pomerovost. 
 
 \section{Historie}
 Matematicka teorie pomerneho rozdeleni mandatu ale saha ke zrodu Spojenych statu Americkych, demokratickeho zrizeni ktere dodnes vyuziva systemu vetsinoveho.\autocite{BAL2}
@@ -96,34 +98,40 @@ Ve vysledku tedy ziskaly politici spojenych statu stejnou ulohu jako pozdejsi de
 Uloha ktery se mohla na prvni pohled zdat az lehka budila kontroverze po dalsich vice nez 150 let.
 Byla duvodem uziti vubec prvniho americkeho prezidentskeho veta kdyz Geroge Washington nesouhlasil se zpusobem rozdeleni ktery znevyhodnoval oproti konkurencnimu navrhu jeho rodnou Virginii.\autocite{BAL1}
 Az v polovine 20. stoleti doslo k dlouhodobemu ustaleni metody vypoctu.
-Ackoliv v Evrope toto tema bylo vzdy spise predmetem akademicke diskuze, 
+Jak uvadi Carstair, v Evrope se tematu zacina venovat pozornost az na konci 19. stoleti.
+V roce 1885 probiha v Antverpach konference na tema pomeroveho volebniho systemu.
+V nasledujicich letech zacnou stty zapadni Evropy postupne tento ovy system vyuzivat, zde jiz ale nedochazi k takovym kontroverzim.
+Do roku 1920 Uz vyuziva pomeroveho systemu vetsina zapadni Evropy.\autocite{BOO}
 
 \chapter{Teoreticky popis metod deleni mandatu}
 
-\section{Pravy pomerovy system} %TODO definovat
+\section{Jednotlive metody pomeroveho zastoupeni}
+Metodou pomeroveho zastoupeni budu nazyvat metodu ktera rozdeli mandaty mezi politicke strany na zaklade poctu ziskanych hlasu, at to tak, ze se snazi dosahnou pomerovosti.
+Prestoze vetsina nasledujicich metod byla prvne vymyslena americkymi matematiky, budu pouzivat pro vysvetleni pojmy strana a hlas a v Evrope bezne pouzivane nazvy.
+Zaroven pri kazdem porovnavani dvou cisel predpokladame ostrou nerovnost, metody reseni rovnosti budou popsany na konci teto kapitoly.
 
-\section{Jednotlive metody}
-Prestoze vetsina nasledujicich metod byla prvne vymyslena americkymi matematiky, budu pouzivat pro vysvetleni pojmy strana, a hlas a v evrope bezne pouzivane nazvy.
-Zaroven predpokladam naprostou ze zadne zisky stran jsou tokove, ze nedojde ke spornym situacim ohledne distribuce krese, ty budou vysvetleny na konci. 
-
-\subsection{Metody Nejvyssich prumeru}
+\subsection{Metody nejvyssich prumeru}
 Prvni skupinou metod deleni mandatu jsou takzvane metody nejvyssich prumeru.
 Tyto metody funguji tak, ze kazda strana ziskava hlasy podle podilu hlasu ktere obdezela a promene Q.
 Tyto podily jsou vsechny zaokrouleny stejnym zpusobem, kazda z metod v teto skupine je charakterizovana svou zaokrouhlovaci metodou.
 Q je urceno tak, aby celkovy rozdeleny pocet mandatu byl roven poctu clenu voleneho zastupitelstva.
 Dve nejpouzivanejsi metody z teto zkupiny jsou d'Hondtova, ktera vzdy zaokrouhluje dolu a Sainte-Lague, ktera zaokrouhluje dle beznych aritmetickych pravidel zaokrouhlovani.
-Tyto metody tvori spektrum od d'Hondtovy metody po Adamsovu, ktera vzdy zaokrouhluje dolu. %TODO Dukaz meznosti Adamse a d'Hondta pro pomerovost
-Adamsova metoda garantuje kreslo kazde strane s alespon jednim hlasem, zatimco d'Hondtova metoda garantuje kreslo az za XXX hlasu.
+Tyto metody tvori spektrum od d'Hondtovy metody , ktera vzdy zaokrouhluje dolu, po Adamsovu, ktera vzdy zaokrouhluje nahoru.
+Vsechny ostatni metody lezi na spektru protoze nekdy zaokropuhluji nahoru a nekdy dolu.\footnote{Napriklad tvz. Danska metoda zaokrouhluje nahoru, pokud cislo je mene nez $\frac{2}{3}$ pod horni celou mezi cisla. 4.32 je tedy zaokrouhleno na 4, ale 4.34 je zaokrouhleno na 5.} 
+Mezi tyto metody je podle Gallaghera chybne nekdy razena Imperaliho metoda.
+To funguje jako d'Hondtova metoda ale, od zisku kazde strany odecita jeden mandat.
+Jak ukazal, tato metoda ale nehleda pomerove rozdeleni, ale jakesi pseudo-pomerove, ktere ma posilit pozici velkych stran.
+\autocite{GAL1}
 
-Matematicky lze tyto metody definovat nasledovne:
-strany ve volbach jsou ocislovane $1$ az $x$ a deli si $N$ kresel
-$h_{x}$ je pocet hlasu strany $x$
-$k_{x}$ je pocet ziskanych zastupitelu stranou x
-$[]$ je metoda zaokrouhlovani
+Matematicky lze tyto metody definovat nasledovne:\\
+strany ve volbach jsou ocislovane $1$ az $x$ a deli si $N$ kresel\\
+$h_{x}$ je pocet hlasu strany $x$\\
+$k_{x}$ je pocet ziskanych zastupitelu stranou x\\
+$[]$ je metoda zaokrouhlovani\\
 a
 $$k_{x}=[\dfrac{h_{x}}{Q}]$$ kde $Q$ je realne cislo zvolene tak, aby $$N=\sum_{n=1}^{x} (k_{n})$$ 
 
-Q libovolne splnujici podminky vytvori stejny vysledek. %TODO dokazat
+Q libovolne splnujici podminky vytvori stejny vysledek.
 Pro d'Hondtovu metodu je $[ ]$ dolni cela cast.
 Pro metodu Sainte-Lague je $[ ]$ zaokrouhleni dle aritmetickych pravidel.
 Pro Adamsovu metodu je $[ ]$ dolni cela cast.
@@ -141,8 +149,6 @@ Zajimave je jak se jednotlive systemy chovaji pokud by se trany pred volbami slo
 U vyse zmineneho pomeroveho systemu ma samozdrejme strana s vetsim procentnim ziskem vetsi sanci mit v dane oblasti nejvice hlasu.
 U metod nejvyssich prumeru je ale situace trochu slozitejsi.
 Nejprve se podivejme na d'Hondovu metodu.
-
-
 
 
 \subsection{Metody nejvetsiho zbytku}
@@ -169,6 +175,8 @@ Slozitejsi otazkou je maximalni hodnota kvoty.
 Pro kvotu blizici se nekonecnu by vsechny strany dosltali nejprve nulu a pak $N$ s nejvyssim ziskem po jednom mandatu.
 
 %TODO The Alabama Paradox The Population Paradox The New States Paradox
+
+\section{Rovnost}
 
 \section{Volby v krajich}
 V mnoha statech se ale rozdelovani dle vyse popsanych metod neprobiha na celostatni urovni, ale oddelene v jednotlivych oblastech.
@@ -315,7 +323,7 @@ To uz ale neovlivnuje vysledek voleb tak jak ho zname, tedy rodeleni kresel stra
 
 \section{Zaver}
 
-\section{Reference}
+\section*{Reference}
 \printbibliography[heading=none]
 
 \end{document}
