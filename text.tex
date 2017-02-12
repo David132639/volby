@@ -1,6 +1,6 @@
-\documentclass[12pt,a4paper]{report}
+\documentclass[12pt,a4paper]{scrreprt}
 \usepackage[utf8]{inputenc}
-\usepackage[czech]{babel}
+\usepackage[british,czech]{babel}
 \usepackage[T1]{fontenc}
 \usepackage{amsmath}
 \usepackage{hyperref}
@@ -8,9 +8,11 @@
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{lmodern}
+\usepackage[hang,flushmargin]{footmisc} 
 \usepackage{multirow}
-\usepackage{booktabs}
-\usepackage[backend=biber, style=numeric, citestyle=numeric]{biblatex}
+\usepackage{chngcntr}
+
+\usepackage[backend=biber,language=british, style=numeric, citestyle=numeric]{biblatex}
 \addbibresource{citace.bib}
 \usepackage{indentfirst}
 \usepackage{setspace}
@@ -86,7 +88,7 @@ Pri volbe vice poslancu by vysledky odpovidaly jeste presneji, lze si vsimnout z
 Pri rozdelovani stovek poslancu uz pujde jen o male rozdily mezi zminenymi procenty.
 Navic, jak ukazal Gallagher, metody rozdelovani (ktere budou vysvetleny nize) pri velkem mnozstvi rozdelovanych mandatu konverguji.\autocite{GAL1}
 To jak se procento ziskanych mandatu  blizi procentu ziskanych hlasu bude dale v praci nazyvano pomerovosti systemu.
-I kdyz existuji numericke indexy pomerovosti, lisi se stale nazor na jejich vyznam a tak be v praci vyuzita intuitivni definice pomerovosti. 
+I kdyz existuji numericke indexy pomerovosti, lisi se stale nazor na jejich vyznam a tak be v praci vyuzita intuitivni definice pomerovosti.\autocite{GAL2}
 
 \section{Historie}
 Matematicka teorie pomerneho rozdeleni mandatu ale saha ke zrodu Spojenych statu Americkych, demokratickeho zrizeni ktere dodnes vyuziva systemu vetsinoveho.\autocite{BAL2}
@@ -104,12 +106,10 @@ V nasledujicich letech zacnou stty zapadni Evropy postupne tento ovy system vyuz
 Do roku 1920 uz vyuziva pomeroveho systemu vetsina zapadni Evropy.\autocite{BOO}
 
 \chapter{Teoreticky popis metod deleni mandatu}
-
 \section{Jednotlive metody pomeroveho zastoupeni}
 Metodou pomeroveho zastoupeni budu nazyvat metodu ktera rozdeli mandaty mezi politicke strany na zaklade poctu ziskanych hlasu, at to tak, ze se snazi dosahnou pomerovosti.
 Prestoze vetsina nasledujicich metod byla prvne vymyslena americkymi matematiky, budu pouzivat pro vysvetleni pojmy strana a hlas a v Evrope bezne pouzivane nazvy.
 Zaroven pri kazdem porovnavani dvou cisel predpokladame ostrou nerovnost, metody reseni rovnosti budou popsany na konci teto kapitoly.
-
 \subsection{Metody nejvyssich prumeru}
 Prvni skupinou metod deleni mandatu jsou takzvane metody nejvyssich prumeru.
 Tyto metody funguji tak, ze kazda strana ziskava hlasy podle podilu hlasu ktere obdezela a promene Q.
@@ -122,15 +122,15 @@ Mezi tyto metody je podle Gallaghera chybne nekdy razena Imperaliho metoda.
 To funguje jako d'Hondtova metoda ale, od zisku kazde strany odecita jeden mandat.
 Jak ukazal, tato metoda ale nehleda pomerove rozdeleni, ale jakesi pseudo-pomerove, ktere ma posilit pozici velkych stran.
 \autocite{GAL1}
-
-Matematicky lze tyto metody definovat nasledovne:\\
-strany ve volbach jsou ocislovane $1$ az $x$ a deli si $N$ kresel\\
-$h_{x}$ je pocet hlasu strany $x$\\
-$k_{x}$ je pocet ziskanych zastupitelu stranou x\\
-$[]$ je metoda zaokrouhlovani\\
-a
-$$k_{x}=[\dfrac{h_{x}}{Q}]$$ kde $Q$ je realne cislo zvolene tak, aby $$N=\sum_{n=1}^{x} (k_{n})$$ 
-
+\newpage
+Matematicky lze tyto metody definovat nasledovne:
+\begin{itemize}
+\item strany ve volbach jsou ocislovane $1$ az $n$ a deli si $N$ kresel
+\item $h_{x}$ je pocet hlasu strany $x$
+\item $k_{x}$ je pocet ziskanych zastupitelu stranou x
+\item $[ ]$ je metoda zaokrouhlovani
+\item $k_{x}=[\dfrac{h_{x}}{Q}]$ kde $Q$ je realne cislo zvolene tak, aby patilo: $$N=\sum_{n=1}^{x} (k_{n})$$
+\end{itemize}
 Q libovolne splnujici podminky vytvori stejny vysledek.
 Pro d'Hondtovu metodu je $[ ]$ dolni cela cast.
 Pro metodu Sainte-Lague je $[ ]$ zaokrouhleni dle aritmetickych pravidel.
@@ -139,17 +139,12 @@ Pro Adamsovu metodu je $[ ]$ dolni cela cast.
 Pro tyto metody existuje alternativni zpusob vypoctu.
 Ten nejprve vysvetlime pro d'Hondtovu metodu.
 Pro kazdou stranu je vypocitan podil jejich hlasu postupne se vsemi prirozenymi cisly od 1 do poctu rozdelovanych mandatu.
+%TODO dovysvetlit
 Tyto pomery kazde strany urcuji jake maximalni Q jim zajisty dany pocet mandatu (prvni pomer strany dava jeden mandat, druhy pomer dva mandaty...).
-
 Pokud tedy je za Q zvoleno N-te nejvyssi cislo mezi vypoctenymi pomery vsech stran, bude Q zvoleno spravne.
 Q ale muzeme z vypoctu vypustit uplne, nebot vime ze pokud kazda strana dostane jeden mandat za kazdy jejich vypocteny pomer vyssi nez nebo roven N-temu nejvyssimu cislu, rozdeleno bude N kresel.
-Podobne lze vypocitat rozdeleni Sainte Lague pomoci rady $0{,}5, 1{,}5, 2{,}5$, Adams... %TODO
-
-Zajimave je jak se jednotlive systemy chovaji pokud by se trany pred volbami sloucili, v tomto teoretickem pripade tak, ze nova strana ziska soucet hlasu puvodnich stran.
-U vyse zmineneho pomeroveho systemu ma samozdrejme strana s vetsim procentnim ziskem vetsi sanci mit v dane oblasti nejvice hlasu.
-U metod nejvyssich prumeru je ale situace trochu slozitejsi.
-Nejprve se podivejme na d'Hondovu metodu.
-
+Podobne lze vypocitat rozdeleni Sainte-Lague pomoci rady $0{,}5, 1{,}5, 2{,}5...$.
+Pomery v rade kterou je pocet hlasu delen odpovidaji hranici zaokrouhleni.
 
 \subsection{Metody nejvetsiho zbytku}
 Druha skupina metod jsou metody nejvyssiho zbytku.
@@ -170,15 +165,12 @@ Pro kvotu $\dfrac{H}{N+1}$ se kvota vejde do celkoveho poctu hlasu presne $N+1$ 
 
 Druhou casto pouzivanou kvoto je kvota Hareova, nekdy take nazyvana prirozena kvota. Ta je rovna pomeru celkoveho poctu hlasu a poctu udelovanych mandatu.
 Jak ukazal Gallagher, strany s mensim volebnim ziskem vetsinou ziskaji pri pouziti Hareovy kvoty vice mandatu nez pri uziti Droopovy. Take dokazal, ze MAximalni kvota zalezi na poctu kandidujicich stran.\autocite{GAL1}
-
-
 %TODO The Alabama Paradox The Population Paradox The New States Paradox
 
 \section{Rovnost}
 Rovnost muze nastat pri rovnosti hlasu, nebo pri rovnosti pomeru pri rozdelovani dle metody nejvyssich prumeru.
 V realnych volebnich systemech se vyuzivaji dva zpusoby reseni teto situace, los a prideleni strane s vetsim poctem hlasu. 
 Prideleni strane s vetsim poctem hlasu je samozrejme mozne jen pro rovnosti pomeru, ne pri rovnosti hlasu, ale ma vyhodu v tom ze vysledek je deterministicky.
-
 
 \section{Volby v krajich}
 V mnoha statech se ale rozdelovani dle vyse popsanych metod neprobiha na celostatni urovni, ale oddelene v jednotlivych oblastech.
@@ -195,15 +187,18 @@ Ale i vetsi oblasti pomerovost narusi, jak bylo ukazano u vysvetleni pomeroveho 
 
 \chapter{Volebni system voleb do Poslancke snemovny}
 \section{Popis systemu}
-Od roku voleb v roce 2002 se 
+Od roku voleb v roce 2002 se u nad s pouziva system voleb v zcela oddelenych krajich.
+Mandaty jsou nejprve rozdeleny Hareovou kvotou mezi jednotlive kraje, k tomu jsou pouzity soucty platnych hlasu v kazdem kraji.
+Pote jsou vyrazeny veskere hlasy pro strany ktere nesplnili podminky pro zisk mandatu, tedy nedosahly \uv{petiprocentni hranice}.
+V kazdem kraji je pak zcela nezavisle provedeno rozdelovani mandatu dle hlasu odevzdanych v danem kraji podle d'Hondtovy metody.
+
 
 \section{Pomerovost soucasneho systemu}
 V teto casti budeme zkoumat vysledky voleb z roku 2006. 
-%zdroj dat?
+Data jsou prevzata ze stranek Ceskeho statictickeho uradu.\autocite{CSU}
 Tyto volby totiz ukazaly nektere zvastni vlastnosti ceskeho volebniho systemu.
-Vysledky voleb byly nasledujici:
-
-\begin{center}
+Vysledky voleb je ukazan v tabulce 1.
+\begin{table}[tbp]
 \catcode`\-=12
 \begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline
@@ -220,91 +215,121 @@ KSČM & 685328 & 26 & 27.25 & 27 & 27 & 27 & 27 \\
 \hline
 KDU-ČSL & 386706 & 13 & 15.38 & 15 & 16 & 15 & 15 \\ 
 \hline
+\end{tabular}
+\caption{Celostatni pohled na vysledky}
+\end{table}
+Jak je nazorne vydet rozdeleni mandatu jak ho predvedl Cesky volebni system neodpovida poctu obdrzenych hlasu.
+Tento rozdil je zpusoben vyse zminenym rozdelovanim mandatu v krajich.
+Lide v kazdem kraji voli sve poslance \uv{oddelene} za \uv{svuj}kraj, tim ale dochazi k ovlivneni vysledku.
+Pro prozkoumani vyse zminenych vysledku tedy volby dvakrat prepocitame s predpokladem, ze pomer volicu jednotlivych stran je vsude stejny.
+Provedeme prepocet jednou tak, jako kdyby republiku tvorilo 8 kraju o 25 mandatech (volebne nejvetsi kraj Praha) a kdyby ho tvorilo 40 kraju o 5 mandatech (volebne nejmensi kraj Karlovarsky).
+Vyuzijeme stejnou metodu jako vyuziva soucasny system.
+Vysledek je videt v tabluce 2 a 3.
+\begin{table}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Strana & V kraji & V cele republice\\
+\hline 
+ODS & 2 & 80\\
+\hline
+ČSSD & 2 & 80\\
+\hline
+SZ & 0 & 0\\
+\hline
+KSČM & 1 & 40\\
+\hline
+KDU-ČSL & 0 & 0\\
+\hline 
 \end{tabular} 
+\caption{Vysledky v krajich po 5 mandatech}
 \end{center}
-%TODO volebni pat?
-Jak je nazorne vydet rozdeleni mandatu jak ho preovedl cesky volebni system neodpovida poctu obdrzenych hlasu.
-Tento rozdil je zpusoben vyse zminenym rozdelovanim mandatu v oblastech.
-V soucasnem ceskem systemu je oblasti kazdy samospravny kraj.
-Lide v kazdem kraji voli sve poslance za \uv{svuj}kraj.
-Pro prozkoumani vyse zminenych vysledku tedy volby dvakrat prepocitame, jednou tak, jako kdyby republiku tvorilo 8 kraju o 25 mandatech (volebne nejvetsi kraj Praha) a kdyby ho tvorilo 40 kraju o 5 mandatech (volebne nejmensi kraj Karlovarsky).
-Budeme predpokladat ze v kazdem kraji je pomer hlasu stejny jako celostatne.
-
-
-
-2 \& 80\\
-2 \& 80\\
-0 \& 0\\
-1 \& 40\\
-0 \& 0\\
-\\
-1\\
-1\\
-1\\
-1\\
-1\\
-
-
-10\& 80 \\
-9 \& 72\\
-1 \& 8\\
-3 \& 24\\
-2 \& 16\\
-
-9\\
-8\\
-2\\
-4\\
-2\\
-
-Kdyz porovname tyto vysledky s vysledky celostatnimi, je videt ze deleni republiky na kraje znamena, ze zpusob rozdelovani mandatu haje zasadni roli.
-Pri celostatnim vyhodnoceni se metody lisi maximalne o jeden madnat, narozdil od propastnych rozdilu pri deleni v krajich.
-Zde vznioka vyse nelogicky vypadajici mezi ziskem mandatu teoretickym na celostatni urovni a slozenim parlamentu jak ho vytvoril volebni system.
-
+\end{table}
+\begin{table}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Strana & V kraji & V cele republice\\
+\hline 
+ODS & 10 & 80\\
+\hline
+ČSSD & 9 & 72\\
+\hline
+SZ & 1 & 8\\
+\hline
+KSČM & 3 & 24\\
+\hline
+KDU-ČSL & 2 & 16\\
+\hline 
+\end{tabular} 
+\caption{Vysledky v krajich po 25 mandatech}
+\end{center}
+\end{table}
+Zde je jasne videt jak deleni mandatu v krajich zasadne ovlivnuje vysledky voleb.
+To je spatne obzvlaste pro male strany ktere pak maji problem i pres prekonani umele hranice pro vstup nejake mandaty ziskat.
 \chapter{Mozne upravy a zaver}
-
 \section{Celostatni rozdelovani}
 Slovensko se vyse zminenych problemu zbavilo tak, ze jejich volby probihaji celostatne.
-Jak bylo videt vyse, pri celostatnim rozdelovani mandatu je volba metody jiz otazkou nekolika malo mandatu.
-Nevyhoda pro volice je, ze kazdy dostava kandidatni listinu o 150 kandidatech (i kdyz to je dano spise optimismem politickych stran nez podpbou systemu) a nema \uv{sve} poslance.
-I kdydz toto muzeme povazovat za reseni problemu, podivejme se, jestlki by bylo mozne zachovat oblastni rozdelovani mandatu.
+Jak bylo videt vyse, pri celostatnim rozdelovani mandatu lze dosahnout vysoke pomerovoti s prakticky libovolnou metopbou deleni mandatu.
+Nevyhoda pro volice je, ze kazdy dostava kandidatni listinu o 150 kandidatech (i kdyz to je dano spise optimismem politickych stran nez podobou systemu) a nema \uv{sve} poslance.
+I kdyz toto muzeme povazovat za reseni problemu, podivejme se, jestli by bylo mozne zachovat oblastni rozdelovani mandatu a pri tom vyresit zminene problemy.
 \section{Jiny zpusob deleni mandatu v krajich}
-Jak bylo zmineno vyse  %potreba pridat do teoretickeho uvodu
 d'Hondtova metoda neni povazovana za nejvice pomerovou.
-SL je v tomto ohlodu hodnocena jako jedna z nejlepsich metod % zdroje
-takze moznym zlepsenim situace je zavedeni teto metody misto metody d'Hondtovy.
+SL je v tomto ohlodu hodnocena jako jedna z nejproporcnejsich metod.\autocite{BEN}
+Moznym zlepsenim situace je tedy zavedeni teto metody misto metody d'Hondtovy.
 Problemem je ze v krajich jako je Karlovarsky neni rozdeleni ktere by presne odpovidalo rozdeleni hlasu casto vubec mozne.
 Strana s 10 procenty hlasu nemuze dostat nic blizsiho svemu zisku nez 0 nebo 20 procent kresel.
-Pohou zmenou metody tedy problem resit nelze. 
+Pohou zmenou metody tedy problem resit nelze, i kdyz by ho mohla mirnit.
 \section{NUTS 2 kraje}
 Jakl bylo vyse popsane, cim mensi kraj tim tezsi je v nem dosahnout pomerneho rozdeleni.
 Dalsi moznosti uporavy systemu je tedy zvetseni volebnich oblasti.
 Vytvoreni oblasti ktere by slouzili jen pro volby by ale melo nekolik problemu.
-Prvni z neich je ze se ztraci puvodni vyznam voleb v krajich, tedy to aby volice zastupovali \uv{jejich} mistni zastupci s kterymi se ztotozkuji.
-Umele rozdeleni republiky na \uv{volebni kraje} muze ale take vest k politickym bojum o jejich hranice a pocet. % zdroj o gerrymandering
+Prvni z neich je ze se ztraci puvodni vyznam voleb v krajich, tedy to aby volice zastupovali \uv{jejich} mistni zastupci s kterymi se ztotoznuji.
+Umele rozdeleni republiky na \uv{volebni kraje} muze take vest k politickym bojum o jejich hranice a pocet.\footnote{Toto je videt napriklad v USA kde se prekreslovani hranic volebnih obvodu stalo duvodem vleklychpolitickych i soudnich boju.}
 Je proto praktictejsi aby se volebni kraje shodovali s jiz existujicimi hranicemi.
 Nabizi se pouzit NUTS 2 regiony, jak je uzivaji Evropske i Ceske instituce vcetne Ceskeho statictickeho uradu.
-%https://www.czso.cz/documents/11244/43384376/NUTS2_CR_2015.pdf/8f87a03e-bd06-4bd1-9fbe-ae6578b5ede4?redirect=https%3A%2F%2Fwww.czso.cz%2Fcsu%2Fczso%2Fcri%2Fpohyb-obyvatelstva-4-ctvrtleti-2015%3Fp_p_id%3D3%26p_p_lifecycle%3D0%26p_p_state%3Dmaximized%26p_p_mode%3Dview%26_3_groupId%3D0%26_3_keywords%3Dnuts%26_3_struts_action%3D%252Fsearch%252Fsearch%26_3_redirect%3D%252Fweb%252Fczso%252Fkatalog-produktu-vydavame
 Kazdy z techto regionu je tvoren jednim nebo vice kraji.
 Je jich 8 a kazdy z nich ma vice nez 1,1 milionu obyvatel.
 Ani toto ale neresi vsechny problemy.
 Jak bylo ukazano vyse ani regiony velikosti Prahy (Praha je jednim z NUTS 2 regionu), nejsou zarukou pomerovosti.
-Takto velike regiony by se ale pri spravne zvolene metode deleni mansatu mohly pomerovosti blizit, ale stale jsou jeste prilis male na to aby presne odpovidaly poctum hlasu.
-Navic zde opet narazime na neplneni puvodniho umysl, vytvoreni oblasti se kterymi volici citi spojenost.
+Takto velike regiony by se ale pri spravne zvolene metode deleni mandatu mohly pomerovosti blizit, ale stale jsou jeste prilis male na to aby presne odpovidaly poctum hlasu.
+Navic zde opet narazime na neplneni puvodniho umyslu, vytvoreni oblasti se kterymi volici citi spojenost.
 \section{Rozdelovani mandatu stran do kraju}
-Reseni ktere by autor teto prace chtel predlozit je rozdelit mandaty na celostatni mandaty a ziskat tak rozlozeni sil v parlamentu ktere by presne odpovidalo pomerum hlasu ktere byly odevzdany ve volbach.
-Mandaty kazde strany by se pak delili mezi kandidaty v jednotlivych krajich podle poctu hlasu pro strany v jednotlivych krajich.
-Tento system by zarucoval ze hlasy stranam ktere se dostanou do parlamentu by v zadnem kraji nebyly irrelevantni, jak tomu ted je u stran s malym ziskem v malych krajich. 
-Zachovala by se prislusnost zvolenych poslancu krajum.
+Reseni ktere by autor teto prace chtel predlozit je rozdelit mandaty na celostatni urovni a ziskat tak rozlozeni sil v parlamentu ktere by presne odpovidalo pomerum hlasu ktere byly odevzdany ve volbach.
+Mandaty kazde strany by se pak delily mezi kandidaty dane strany v jednotlivych krajich podle poctu hlasu pro danou stranu.
+Tento system by zarucoval, ze hlasy stranam ktere se dostanou do parlamentu by v zadnem kraji nebyly irrelevantni, jak tomu ted je u stran s malym ziskem v malych krajich, a to ani kdyby nakonec strana v kraji zadne mandaty neziskala. 
+Zachovala by se prislusnost zvolenych poslancu krajum, ale misto toho aby byla prilusnost krajum prvni a pomerovost rozdeleni mandatu mezi strany druha, udela z rozdeleni mezi strany dulezitejsi bod.
 Tento postup ma ale take sve nevyhody.
 Problem deleni maleho poctu mandatu mezi strany se promenil mezi deleni maleho poctu mandatu mezi kraje.
 To uz ale neovlivnuje vysledek voleb tak jak ho zname, tedy rodeleni kresel stranam.
 
-%TODO metoda deleni mandatu mezi kraje
-%TODO vysledky spocitane navrhovanym systemem
+Zde je, jak by dopadli volby v roce 2006 dle navrhovane metody s tim, ze k deleni mandatu mezi strany bude vyuzito metody d'Hondtovy (soucasna metoda) a mezi kraje metody Saint-Lague.
+\begin{table}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+Kraj & Soucasny & Navrhovany & ODS & ČSSD & SZ & KSČM & KDU-ČSL \\ \hline
+Hlavní město Praha & 25 & 24 & 13 & 6 & 2 & 2 & 1 \\ \hline
+Středočeský kraj & 23 & 22 & 10 & 7 & 1 & 3 & 1 \\ \hline
+Jihočeský kraj & 13 & 13 & 5 & 4 & 1 & 2 & 1 \\ \hline
+Plzeňský kraj & 11 & 12 & 4 & 4 & 1 & 2 & 1 \\ \hline
+Karlovarský kraj & 5 & 5 & 2 & 2 & 0 & 1 & 0 \\ \hline
+Ústecký kraj & 14 & 13 & 5 & 5 & 1 & 2 & 0 \\ \hline
+Liberecký kraj & 8 & 7 & 3 & 2 & 1 & 1 & 0 \\ \hline
+Královéhradecký kraj & 11 & 11 & 4 & 4 & 1 & 1 & 1 \\ \hline
+Pardubický kraj & 10 & 11 & 4 & 4 & 1 & 1 & 1 \\ \hline
+Vysočina & 10 & 10 & 3 & 4 & 0 & 2 & 1 \\ \hline
+Jihomoravský kraj & 23 & 23 & 8 & 8 & 1 & 3 & 3 \\ \hline
+Olomoucký kraj & 12 & 13 & 4 & 5 & 1 & 2 & 1 \\ \hline
+Zlínský kraj & 12 & 12 & 4 & 4 & 1 & 1 & 2 \\ \hline
+Moravskoslezský
+kraj & 23 & 24 & 7 & 10 & 1 & 4 & 2 \\ \hline
+Celkem  & 200 & 200 & 76 & 69 & 13 & 27 & 15 \\ \hline
+\end{tabular}
+\caption{Porovnani nove metody a soucasneho systemu}
+\end{table}
 
 \section{Zaver}
-
+Cilem teto prace bylo vytvorit popis soucasneho volebniho systemu do Poslanecke snemovny Parlamentu Ceske republiky vcetne teorie pomeroveho zastoupeni, analyzovat soucasny system a navrhnout jeho upravy. Kazdy volebni system je ale kompromisem, tedy i navrhovany system ma sve vady. Autor ale veri ze jeho aplikace by vytvorila ferovejsi volebni prostredi a pritom zachovala krajovou prislusnot zvolenych poslancu.
 \section*{Reference}
 \printbibliography[heading=none]
 
