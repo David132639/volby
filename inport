@@ -1,63 +1,4 @@
-\documentclass[12pt]{report}
-\usepackage[utf8]{inputenc}
-\usepackage[british,czech]{babel}
-\usepackage[T1]{fontenc}
-\usepackage{amsmath}
-\usepackage{hyperref}
-\usepackage{amsfonts}
-\usepackage{amssymb}
-\usepackage{graphicx}
-\usepackage{lmodern}
-\usepackage{chngcntr}
-\counterwithout{figure}{chapter}
-\counterwithout{table}{chapter}
-\usepackage[hang,flushmargin]{footmisc} 
-\usepackage{multirow}
-\usepackage{titlesec}
-\titleformat{\chapter}{\normalfont\Large\bfseries}{\thechapter.}{20pt}{\normalfont\Large\bfseries}
-\usepackage[backend=biber,language=british, style=numeric, citestyle=numeric]{biblatex}
-\addbibresource{citace.bib}
-\usepackage{indentfirst}
-\usepackage{setspace}
-\onehalfspacing
-\usepackage[left=2.5cm,right=2cm,top=2.5cm,bottom=2cm, a4paper]{geometry}
-\makeindex
-\begin{document}
-\begin{titlepage}
-	\begin{center}
-	{\large Gymnázium Christiana Dopplera, Zborovská 45, Praha 5 \par}
-	\vfill
-	\par\vspace{1cm}
-	{\scshape\LARGE ROČNÍKOVÁ PRÁCE \par}
-	{\huge\bfseries Analýza systému voleb do Poslanecké sněmovny České republiky\par}
-	\vfill
-\end{center}
-Vypracoval: David Žáček \\
-Třída: 8. M \\
-Školní rok: 2016/2017 \\
-Seminář : Matematický seminář \\
-	\vfill
-\end{titlepage}
-
-\vspace*{\fill}
-\begin{quote}
-Prohlašuji, že jsem svou ročníkovou práci napsal samostatně a výhradně s
-použitím 
-citovaných pramenů. Souhlasím s
-využíváním 
-práce na Gymnáziu Christiana Dopplera 
-pro studijní účely. \\
-\end{quote}
-
-V Praze dne \today \hfill David Žáček
-
-\vspace*{\fill}
-\thispagestyle{empty}
-\newpage
-\tableofcontents
-\newpage
-\chapter{Úvod}
-\section{Cíle} Cílem této práce je analyzovat současný volební systém pro volby do Poslanecké sněmovny Parlamentu České republiky a navrhnout jeho úpravy, které by ho udělaly spravedlivějším.
+\chapter{Úvod} \section{Cíle} Cílem této práce je analyzovat současný volební systém pro volby do Poslanecké sněmovny Parlamentu České republiky a navrhnout jeho úpravy, které by ho udělaly spravedlivějším.
 Volebním systémem bude v této práci nazýván postup, dle kterého se mezi strany účastnící se voleb rozdělují mandáty na základě počtu hlasů které obdržely.
 Nebude zde zkoumána umělá hranice pro zahrnutí strany do rozdělování mandátů, u nás známá jako \uv{pětiprocentní hranice}.
 \footnote{Pětiprocentní hranice ve skutečnosti není zcela přesný název.
@@ -73,10 +14,10 @@ Tento postup má ale poměrně zásadní vadu, zcela ignoruje velké množství 
 To lze demonstrovat na hypotetickém příkladu.
 Ve volbách se o přízeň voličů uchází pět názorů na fungování země, které budu označovat A až E.
 Celkem se volí 8 poslanců.
-Každý názor má své podporovatele, názor A podporuje 25\% obyvatel, názor B 21\%, C 19\%, D 18\% a E 17\%.
+Každý názor má své poporovatele, názor A podporuje 25\% obyvatel, názor B 21\%, C 19\%, D 18\% a E 17\%.
 Předpokládejme, že všechny názory jsou u všech skupinách obyvatel ve stejném poměru, a předpokládáme dokonalou spolupráci všech příznivců každého názoru a neochotu pracovat se stoupenci jiného názoru.
 Pokud bychom vytvořili 8 skupin obyvatel (například podle bydliště) a každou nechali rozhodnout o jednom poslanci, všech 8 poslanců by nakonec podporovalo názor A.
-To proto, že stoupenci A by v každém hlasování navrhli jediného kandidáta, který by s 25\% podporou získal víc hlasů než libovolný kandidát další strany.
+To proto, že stoupenci A by v každém hlasování navrhli jediného kandidáta, který by s 25\% podporou zisal víc hlasů než libovolný kandidát další strany.
 Tento výsledek se ale nezdá velmi spravedlivý z toho pohledu, že proti názoru A hlasovaly tři čtvrtiny obyvatel a přesto získali jeho stoupenci všechna křesla v parlamentu.
 Poměrné zastoupení tento problém řeší.
 Namísto otázky kdo získal nejvíce se ptá, kdo získal jakou část.
@@ -88,10 +29,10 @@ Zisky stran z hlediska poslanců jsou tedy 25\% pro A až C a 12.5\% pro D a E.
 Procenta sice výsledkům voleb přesně neodpovídají, ale jde o mnohem lepší reprezentaci než u většinového výsledku kde všechny zastupitele získalo A.
 Při volbě více poslanců by výsledky odpovídaly ještě přesněji, lze si všimnout že jednoho ani pět poslanců nelze \uv{férové} rozdělit mezi 5 stran tak aby odpovídali procenta zisku hlasů a zisku mandátu.
 Při rozdělování stovek poslanců už půjde jen o malé rozdíly mezi zmíněnými procenty.
-Navíc, jak ukázal Gallagher, metody rozdělování (které budou vysvětleny níže) při velkém množství rozdělovaných mandátů konvergují.\autocite{GAL1} To jak se procento získaných mandátů blíží procentu získaných hlasů bude dále v práci nazýváno poměrností systémů.
-I když existují numerické indexy pomerovosti, liší se stále názor na jejich význam a výpovědní hodnotu a tak be v práci využita intuitivní definice poměrnosti.\autocite{GAL2} \section{Historie} Matematická teorie poměrného rozdělení mandátů ale sahá ke zrodu Spojených států Amerických, demokratického zřízení které dodnes využívá systému většinového.\autocite{BAL2} Protože vznikaly jako společenství 13 existujících států, bylo již od prvních chvil zásadním tématem vliv jednotlivých států ve vznikajícím státě, lépe řečeno poměr vlivu malých a velkých států.
-Pro nás nejzajímavějším tématem je rozdělení křesel ve Sněmovně reprezentantů, dolní komoře Amerického zákonodárného orgánu.
-Dle americké ústavy přijaté 1878 získávají státy representatnty podle počtu obyvatel, svobodný člověk se počítal za jednoho obyvatele, indiáni nebyly počítání vůbec a ostatní za 3/5 obyvatele.\autocite{CON} Ústava ale přesný postup dělení nestanovila.
+Navíc, jak ukázal Gallagher, metody rozdělování (které budou vysvětleny níže) při velkém množství rozdělovaných mandátů konvergují.\autocite{GAL1} To jak se procento získaných mandátů blíží procentu získaných hlasů bude dále v práci nazýváno pomerovosti systémů.
+I když existují numerické indexy pomerovosti, liší se stále názor na jejich význam a výpovědní hodnotu a tak be v práci využita intuitivní definice poměrnosti.\autocite{GAL2} \section{Historie} Matematická teorie poměrného rozdělení mandátů ale sahá ke zrodu Spojených států Amerických, demokratického zřízení které dodnes využívá systému většinového.\autocite{BAL2} Protože vznikaly jako společenství 13 existujících států, bylo již od prvních chvil zásadním tématem vliv jednotlivých států ve vznikajícím státě, lépe řečeno poměr vlivu malých a vekych států.
+Pro nás nejzajímavějším tématem je rozdělení křesel ve Sněmovně reprezenatntu, dolní komoře Amerického zákonodárného orgánu.
+Dle americké ústavy přijaté 1878 získávají státy representatnty podle počtu obyvatel, svobodný člověk se počítal za jednoho obyvatele, indiáni nebyly počítání vůbec a ostatní za 3/5 obyvatele.\autocite{ČON} Ústava ale přesný postup dělení nestanovila.
 Ve výsledku tedy získaly politici spojených států stejnou úlohu jako pozdější dělení křesel mezi strany dle počtu hlasů, ale šlo o dělení křesel státům dle počtu obyvatel.
 Úloha který se mohla na první pohled zdát až lehká budila kontroverze po dalších více než 150 let.
 Jak uvadi Balinski, byla důvodem užití vůbec prvního amerického prezidentského veta když Geroge Washington nesouhlasil se způsobem rozdělení který znevýhodňoval oproti konkurenčnímu návrhu jeho rodnou Virginii.\autocite{BAL1} Až v polovině 20.
@@ -99,50 +40,47 @@ století došlo k dlouhodobému ustálení metody výpočtu.
 Jak uvádí Carstair, v Evropě se tématu začíná věnovat pozornost až na konci 19.
 století.
 V roce 1885 probíhá v Antverpách konference na téma poměrného volebního systému.
-V následujících letech začnou státy západní Evropy postupně tento nový systém využívat, zde již ale nedochází k takovým kontroverzím.
-Do roku 1920 už využívá poměrného systému většina západní Evropy.\autocite{BOO} \chapter{Teoretický popis metod dělení mandátu} \section{Jednotlivé metody poměrného zastoupení} Metodou poměrného zastoupení budu nazývat metodu která rozdělí mandáty mezi politické strany na základě počtu získaných hlasů, ať to tak, že se snaží dosáhnou poměrnosti.
+V následujících letech začnou stty západní Evropy postupně tento ovy systém využívat, zde již ale nedochází k takovým kontroverzím.
+Do roku 1920 už využívá poměrného systému většina západní Evropy.\autocite{BOO} \chapter{Teoretický popis metod dělení mandátu} \section{Jednotlivé metody poměrného zastoupení} Metodou poměrného zastoupení budu nazývat metodu která rozdělí mandáty mezi politické strany na základě počtu získaných hlasů, ať to tak, že se snaží dosáhnou pomerovosti.
 Přestože většina následujících metod byla prvně vymyšlená americkými matematiky, budu používat pro vysvětlení pojmy strana a hlas a v Evropě běžně používané názvy.
 Zároveň při každém porovnávání dvou čísel předpokládejme ostrou nerovnost, metody řešení rovnosti budou popsány na konci této kapitoly.
 \subsection{Metody nejvyšších průměru} První skupinou metod dělení mandátu jsou takzvané metody nejvyšších průměru.
-Tyto metody fungují tak, že každá strana získává hlasy podle podílu hlasu které obdržela a proměně Q.
-Tyto podíly jsou všechny zaokrouhlený stejným způsobem, každá z metod v této skupině je charakterizována svou zaokrouhlovací metodou.
+Tyto metody fungují tak, že každá strana získává hlasy podle podílu hlasu které obdezela a proměně Q.
+Tyto podíly jsou všechny zaokrouleny stejným způsobem, každá z metod v této skupině je charakterizována svou zaokrouhlovaci metodou.
 Q je určeno tak, aby celkový rozdělený počet mandátů byl roven počtu rozdělovaných mandátů.
-Dvě nejpoužívanější metody z této skupiny jsou d'Hondtova, která vždy zaokrouhluje dolů a Sainte-Lague, která zaokrouhluje dle běžných aritmetických pravidel zaokrouhlování.
+Dvě nejpoužívanější metody z této zkupiny jsou d'Hondtova, která vždy zaokrouhluje dolů a Sainte-Lague, která zaokrouhluje dle běžných aritmetických pravidel zaokrouhlování.
 Tyto metody tvoří spektrum od d'Hondtovy metody , která vždy zaokrouhluje dolů, po Adamsovu, která vždy zaokrouhluje nahoru.
-Všechny ostatní metody leží na spektru protože někdy zaokrouhlují nahoru a někdy dolů.\footnote{Například Dánská metoda zaokrouhluje nahoru, pokud číslo je méně než $\frac{2}{3}$ pod horní celou mezi čísla, 4.32 je tedy zaokrouhleno na 4, ale 4.34 je zaokrouhleno na 5.} Mezi tyto metody je podle Gallaghera chybně někdy řazena Imperaliho metoda.
+Všechny ostatní metody leží na spektru protože někdy zaokrouhlují nahoru a někdy dolů.\footnote{Například tvz.
+Dánská metoda zaokrouhluje nahoru, pokud číslo je méně než $\frac{2}{3}$ pod horní celou mezi čísla, 4.32 je tedy zaokrouhleno na 4, ale 4.34 je zaokrouhleno na 5.} Mezi tyto metody je podle Gallaghera chybně někdy řazena Imperaliho metoda.
 To funguje jako d'Hondtova metoda, ale od zisku každé strany odečítá jeden mandát.
 Jak ukázal, tato metoda ale nehledá poměrné rozdělení, ale jakési pseudo-poměrné, které má posílit pozici velkých stran.
-\autocite{GAL1} \newpage Matematicky lze tyto metody definovat následovně: \begin{itemize} \item strany ve volbách jsou očíslované $1$ až $n$ a dělí si $N$ křesel \item $h_{x}$ je počet hlasů strany $x$ \item $k_{x}$ je počet získaných zastupitelů stranou x \item $[ ]$ je metoda zaokrouhlování \item $k_{x}=[\dfrac{h_{x}}{Q}]$ kde $Q$ je reálné číslo zvolené tak, aby patilo: $$N=\sum_{n=1}^{x} (k_{n})$$ \end{itemize} Q libovolně splňující podmínky vytvoří stejný výsledek.\autocite{GAL1} Pro d'Hondtovu metodu je $[ ]$ dolní celá část.
+\autocite{GAL1} \newpage Matematicky lze tyto metody definovat následovně: \begin{itemize} \item strany ve volbách jsou očíslované $1$ až $n$ a dělí si $N$ křesel \item $h_{x}$ je počet hlasů strany $x$ \item $k_{x}$ je počet získaných zastupitelů stranou x \item $[ ]$ je metoda zaokrouhlování \item $k_{x}=[\dfrac{h_{x}}{Q}]$ kde $Q$ je reálné číslo zvolené tak, aby patilo: $$N=\sum_{n=1}^{x} (k_{n})$$ \end{itemize} Q libovolně splňující podmínky vytvoří stejný výsledek.\autocite{GAL} Pro d'Hondtovu metodu je $[ ]$ dolní celá část.
 Pro metodu Sainte-Lague je $[ ]$ zaokrouhlení dle aritmetických pravidel.
 Pro Adamsovu metodu je $[ ]$ dolní celá část.
-
-
 Pro tyto metody existuje alternativní způsob výpočtu.
 Ten nejprve vysvětlíme pro d'Hondtovu metodu.
 Pro každou stranu je vypočítán podíl jejich hlasů postupně se všemi přirozenými čísly od 1 do počtu rozdělovaných mandátů.
-Tyto poměry každé strany určují jaké maximální Q jim zajisty daný počet mandátů (první poměr strany dává jeden mandát, druhý poměr dva mandáty...).
+%TODO dovysvětlit Tyto poměry každé strany určují jaké maximální Q jim zajisty daný počet mandátů (první poměr strany dává jeden mandát, druhý poměr dva mandáty...).
 Pokud tedy je za Q zvoleno N-té nejvyšší číslo mezi vypočtenými poměry všech stran, bude Q zvoleno správně.
 Q ale můžeme z výpočtu vypustit úplně, neboť víme že pokud každá strana dostane jeden mandát za každý jejich vypočtený poměr vyšší než nebo roven N-tému nejvyššímu číslu, rozděleno bude N křesel.
 Podobně lze vypočítat rozdělení Sainte-Lague pomocí řady $0{,}5, 1{,}5, 2{,}5...$.
-To proto, že pokud strana dosáhne alespoň dvojnásobku kvóty, neboli je počet jejich hlasů vydělený $0{,}5$ větší než kvóta, pak díky zaokrouhlení získá jeden mandát.
-Pokud to splňuje i po vydělení $1{,}5$ pak dostane dva...
 Poměry v řadě kterou je počet hlasů dělen odpovídají hranici zaokrouhlení.
 \subsection{Metody největšího zbytku} Druhá skupina metod jsou metody nejvyššího zbytku.
-Tyto metody využívají takzvané kvóty.
+Tyto metody využívají takzvne kvóty.
 Kvóta je počet hlasů potřebný k zisku jednoho mandátu, za dvě kvóty získá strana dva mandáty...
 Kvóta jsou tedy vždy přirozené číslo.
 Každá strana nejprve získá počet mandátů rovný počtu kvót které se vejdou do jejího volebního zisku.
 Díky výběru kvóty (jak bude dále vysvětleno) můžou být rozděleny buďto všechny mandáty, nebo méně než má být.
 Pokud je jich rozděleno méně, získávají zbylé mandáty po jednom strany s největším zbytkem po dělení počtu získaných hlasů kvótou.
-Existují i kvóty které nezaručují ze mandátů nebude rozděleno více než má, ty pak odebírají mandáty stranám s nejmenším zbytkem.
+Existují i kvóty které nezaručují ze mandatů nebude rozděleno více než má, ty pak odebírají mandáty stranám s nejmenším zbytkem.
 Tyto kvóty se ale používají zřídka.
 Rozlišovací vlastností těchto systémů je způsob určení kvóty.
 Kvóta se vždy určuje dle celkového součtu hlasů a počtu volených zastupitelů.
 Minimální kvótu lze definovat snadno, nesmí dovolit zisk více mandátů než má být rozděleno.
-Tato kvóta se nazývá Droopova, a je definována jako první přirozené číslo větší než $\dfrac{H}{N+1}$ kde $H$ je součet všech hlasů a $N$ počet rozdělovaných mandátů.
-Tuto kvótu lze odvodit následovně: Celkově může být (bez dorozdělování dle zbytku) rozděleno maximálně tolik mandátů, kolikrát se kvóta celá vejde do celkového počtu hlasů.
+Tato kvóta se nazýva Droopova, a je definována jako první přirozené číslo větší než $\dfrac{H}{N+1}$ kde $H$ je součet všech hlasů a $N$ počet rozdělovaných mandátů.
+Tuto kvótu lze odvodit následovně: Celkově může být (bez dorozdelovani dle zbytku) rozděleno maximálně tolik mandátů, kolikrát se kvóta celá vejde do celkového počtu hlasů.
 Pro kvótu $\dfrac{H}{N+1}$ se kvóta vejde do celkového počtu hlasů přesně $N+1$ krát, pokud se kvóta zvýší, už se do celkového počtu hlasů $N+1$ krát nevejde, vejde se tedy maximálně $N$, maximálně může být rozděleno $N$ mandátu.
-Druhou často používanou kvótou je kvóta Hareova, někdy také nazývaná přirozená kvóta.
+Druhou často používanou kvoto je kvóta Hareova, někdy také nazývaná přirozená kvóta.
 Ta je rovná poměru celkového počtu hlasů a počtu udělovaných mandátů.
 Jak ukázal Gallagher, strany s menším volebním ziskem většinou získají při použití Hareovy kvóty více mandátů než při užití Droopovy.
 Také dokázal, že maximální použitelná kvóta (která rozdelí celý rozdělovany počet mandátů) záleží na počtu kandidujících stran.\autocite{GAL1} %TODO The Alabama Paradox The Population Paradox The New States Paradox \section{Rovnost} Rovnost může nastat při rovnosti hlasů, nebo při rovnosti poměrů při rozdělování dle metody nejvyšších průměru.
@@ -153,34 +91,32 @@ Smysl tohoto opatření je, že občané mají své \uv{místní} zástupce.
 To v praxi funguje tak, že podle celkového počtu hlasů odevzdaných v každé oblasti, se celkový počet křesel nejprve rozdělí mezi jednotlivé oblasti.\footnote{Rozdělení mandátů mezi oblastí je opět obdoba stejné úlohy dělení mandáty mezi státy nebo strany} V každé z těchto oblastí je přidělený počet mandátů rozdělován odděleně dle výše rozebraných pravidel.
 Některé státy rozdělování neprovádí naprosto odděleně, ale částečně odděleně.
 Příkladem může být níže vysvětleny systém kterým se v ČR volil parlament až do roku 2000.
-Toto rozdělování v oblastech sice dává voličům \uv{místní} zástupce, má ale zásadní nevýhodu.
-Malé oblasti vedou k narušení poměrnosti systémů.
+Toto rozdělování v oblastech sice dává voličům \úv{místní} zástupce, má ale zásadní nevýhodu.
+Malé oblasti vedou k narušení pomerovosti systémů.
 V extrémním případě oblasti kde je volen vždy jeden zástupce jde o výše popsaný většinový systém.
-Ale i větší oblasti poměrnost naruší, jak bylo ukázáno u vysvětlení poměrného systému.
-\chapter{Volební systém voleb do Poslanecké sněmovny} \section{Popis systému} Od roku voleb v roce 2002 se u nad s používá systém voleb v zcela oddělených krajích.
+Ale i větší oblasti pomerovost naruší, jak bylo ukázáno u vysvětlení poměrného systému.
+\chapter{Volební systém voleb do Poslancké sněmovny} \section{Popis systému} Od roku voleb v roce 2002 se u nad s používá systém voleb v zcela oddělených krajích.
 Mandáty jsou nejprve rozděleny Hareovou kvótou mezi jednotlivé kraje, k tomu jsou použity součty platných hlasů v každém kraji.
 Poté jsou vyřazeny veškeré hlasy pro strany které nesplnili podmínky pro zisk mandátů, tedy nedosáhly \uv{pětiprocentní hranice}.
 V každém kraji je pak zcela nezávisle provedeno rozdělování mandátů dle hlasů odevzdaných v daném kraji podle d'Hondtovy metody.
 \section{Pomerovost současného systému} V této části budeme zkoumat výsledky voleb z roku 2006.
-Data jsou převzata ze stránek Českého statistického úřadu.\autocite{CSU} Tyto volby totiž ukázaly některé zvláštní vlastností českého volebního systému.
+Data jsou převzata ze stránek Českého statistického úřadu.\autocite{CSU} Tyto volby totiž ukázaly některé zvastni vlastností českého volebního systému.
 Výsledek voleb je ukázán v tabulce 1.
-\begin{table}[p]
-\catcode`\-=12
-\begin{tabular}{|c|c|c|c|c|c|c|c|} \hline \multirow{2}{*}{Strana} & \multicolumn{2}{|c|}{Skutečné Výsledky} & \multirow{2}{*}{Teoretické mandáty} & \multicolumn{4}{|c|}{Rozdělení dle různých metod} \\
+\begin{table} \catcode`\-=12 \begin{tabular}{|c|c|c|c|c|c|c|c|} \hlíně \multirow{2}{*}{Strana} & \multicolumn{2}{|c|}{Skutečné Výsledky} & \multirow{2}{*}{Teoretické mandáty} & \multicolumn{4}{|c|}{Rozdělení dle různých metod} \\
 \cline{2-3} \cline{5-8} & Hlasy & Mandáty & & d'Hondt & Adams & Hare & Droop \\
 \hline ODS & 1892475 & 81 & 75.25 & 76 & 75 & 75 & 76 \\
 \hline ČSSD & 1728827 & 74 & 68.74 & 69 & 68 & 69 & 69 \\
 \hline SZ & 336487 & 6 & 13.38 & 13 & 14 & 14 & 13 \\
 \hline KSČM & 685328 & 26 & 27.25 & 27 & 27 & 27 & 27 \\
 \hline KDU-ČSL & 386706 & 13 & 15.38 & 15 & 16 & 15 & 15 \\
-\hline \end{tabular} \caption{Celostátní pohled na výsledky} \end{table} Jak je názorně vidět rozdělení mandátů jak ho předvedl Český volební systém neodpovídá počtu obdržených hlasů.
+\hline \end{tabular} \caption{Celostátní pohled na výsledky} \end{table} Jak je názorně vydet rozdělení mandátů jak ho předvedl Český volební systém neodpovídá počtu obdržených hlasů.
 Tento rozdíl je způsoben výše zmíněným rozdělováním mandátu v krajích.
 Lidé v každém kraji volí své poslance \uv{oddělené} za \uv{svůj}kraj, tím ale dochází k ovlivnění výsledků.
 Pro prozkoumání výše zmíněných výsledků tedy volby dvakrát přepočítáme s předpokladem, že poměr voličů jednotlivých stran je všude stejný.
 Provedeme přepočet jednou tak, jako kdyby republiku tvořilo 8 krajů o 25 mandátech (volebně největší kraj Praha) a kdyby ho tvořilo 40 krajů o 5 mandátech (volebně nejmenší kraj Karlovarský).
 Využijeme stejnou metodu jako využívá současný systém.
-Výsledek je vidět v tabulce 2 a 3.
-\begin{table} \begin{center} \begin{tabular}{|c|c|c|} \hline Strana & V kraji & V celé republice\\
+Výsledek je vidět v tabluce 2 a 3.
+\begin{table} \begin{center} \begin{tabular}{|c|c|c|} \hlíně Strana & V kraji & V celé republice\\
 \hline ODS & 2 & 80\\
 \hline ČSSD & 2 & 80\\
 \hline SZ & 0 & 0\\
@@ -195,35 +131,34 @@ Výsledek je vidět v tabulce 2 a 3.
 \hline \end{tabular} \caption{Výsledky v krajích po 25 mandátech} \end{center} \end{table} Zde je jasně vidět jak dělení mandátů v krajích zásadně ovlivňuje výsledky voleb.
 To je špatné obzvláště pro malé strany které pak mají problém i přes překonání umělé hranice pro vstup nějaké mandáty získat.
 \chapter{Možné úpravy a závěr} \section{Celostátní rozdělování} Slovensko se výše zmíněných problémů zbavilo tak, že jejich volby probíhají celostátně.
-Jak bylo vidět výše, při celostátním rozdělování mandátů lze dosáhnout vysoké poměrnosti s prakticky libovolnou metodou dělení mandátů.
+Jak bylo vidět výše, při celostátním rozdělování mandátů lze dosáhnout vysoké pomerovoti s prakticky libovolnou metopbou dělení mandátů.
 Nevýhoda pro voliče je, že každý dostává kandidátní listinu o 150 kandidátech (i když to je dáno spíše optimismem politických stran než podobou systému) a nemá \uv{své} poslance.
 I když toto můžeme považovat za řešení problémů, podívejme se, jestli by bylo možné zachovat oblastní rozdělování mandátů a při tom vyřešit zmíněné problémy.
 \section{Jiný způsob dělení mandátu v krajích} d'Hondtova metoda není považována za nejvíce poměrnou.
 SL je v tomto ohlodu hodnocena jako jedna z nejpoměrnějších metod.\autocite{BEN} Možným zlepšením situace je tedy zavedení této metody místo metody d'Hondtovy.
 Problémem je že v krajích jako je Karlovarský není rozdělení které by přesně odpovídalo rozdělení hlasů často vůbec možné.
 Strana s 10 procenty hlasů nemůže dostat nic bližšího svému zisku než 0 nebo 20 procent křesel.
-Pouhou změnou metody tedy problém řešit nelze, i když by ho mohla mírnit.
-\section{NUTS 2 regiony} Jakl bylo výše popsané, čím menší kraj tím těžší je v něm dosáhnout poměrného rozdělení.
+Pohou změnou metody tedy problém řešit nelze, i když by ho mohla mírnit.
+\section{NUTS 2 kraje} Jakl bylo výše popsané, čím menší kraj tím těžší je v něm dosáhnout poměrného rozdělení.
 Další možnosti úpravy systémů je tedy zvětšení volebních oblastí.
 Vytvoření oblasti které by sloužili jen pro volby by ale mělo několik problémů.
 Umělé rozdělení republiky na \uv{volební kraje} může také vést k politickým bojům o jejich hranice a počet.\footnote{Toto je vidět například v USA kde se překreslování hranic volebních obvodů stalo důvodem vleklých politických i soudních bojů.} Je proto praktičtější aby se volební kraje shodovali s již existujícími hranicemi.
-Nabízí se použít NUTS 2 regiony, jak je užívají Evropské i České instituce včetně Českého statistického úřadů.
+Nabízí se použít NUTS 2 regiony, jak je užívají Evropské i České instituce včetně Českého statictickeho úřadů.
 Každý z těchto regionů je tvořen jedním nebo více kraji.
 Je jich 8 a každý z nich má více než 1,1 milionu obyvatel.
 Ani toto ale neřeší všechny problémy.
-Jak bylo ukázáno výše ani regiony velikosti Prahy (Praha je jedním z NUTS 2 regionů), nejsou zárukou poměrnosti.
-Takto veliké regiony by se ale při správně zvolené metodě dělení mandátu mohly poměrnosti blížit, ale stále jsou ještě příliš malé na to aby přesně odpovídaly počtům hlasů.
+Jak bylo ukázáno výše ani regiony velikosti Prahy (Praha je jedním z NUTS 2 regionů), nejsou zárukou pomerovosti.
+Takto veliké regiony by se ale při správně zvolené metodě dělení mandátu mohly pomernosti blížit, ale stále jsou ještě příliš malé na to aby přesně odpovídaly počtům hlasů.
 Navíc zde opět narážíme na neplnění původního úmyslu, vytvoření oblasti se kterými voliči cítí spojenost.
 \section{Rozdělování mandátů nejprve stranám pak krajům} Řešení které by autor této práce chtěl předložit je rozdělit mandáty na celostátní úrovni a získat tak rozložení sil v parlamentu které by přesně odpovídalo poměrům hlasů které byly odevzdány ve volbách.
 Mandáty každé strany by se pak dělily mezi kandidáty dané strany v jednotlivých krajích podle počtu hlasů pro danou stranu.
-Tento systém by zaručoval, že hlasy stranám které se dostanou do parlamentu by v žádném kraji nebyly irelevantní, jak tomu teď je u stran s malým ziskem v malých krajích, a to ani kdyby nakonec strana v kraji žádné mandáty nezískala.
+Tento systém by zaručoval, že hlasy stranám které se dostanou do parlamentu by v žádném kraji nebyly irrelevantní, jak tomu teď je u stran s malým ziskem v malých krajích, a to ani kdyby nakonec strana v kraji žádné mandáty nezískala.
 Zachovala by se příslušnost zvolených poslanců krajům, ale \uv{spravedlivé} rozdělení mandátů mezi strany by bylo předřazeno.
 Tento postup má ale také své nevýhody.
 Problém dělení malého počtu mandátů mezi strany se proměnil mezi dělení malého počtu mandátů mezi kraje.
-To už ale neovlivňuje výsledek voleb tak jak ho známe, tedy rozdělení křesel stranám.
-V tabulce 4 je ukázáno, jak by dopadly volby v roce 2006 dle navrhované metody, pokud k dělení mandátu mezi strany bude využito metody d'Hondtovy (současná metoda) a mezi kraje metody Saint-Lague.
-\begin{table} \begin{tabular}{|c|c|c|c|c|c|c|c|} 
-\hline Kraj & Současný & Navrhovaný & ODS & ČSSD & SZ & KSČM & KDU-ČSL \\
+To už ale neovlivňuje výsledek voleb tak jak ho známe, tedy rozdeleni křesel stranám.
+V tabulce 4 ja ukázáno, jak by dopadly volby v roce 2006 dle navrhované metody, pokud k dělení mandátu mezi strany bude využito metody d'Hondtovy (současná metoda) a mezi kraje metody Saint-Lague.
+\begin{table} \begin{tabular}{|c|c|c|c|c|c|c|c|} \hline Kraj & Současný & Navrhovaný & ODS & ČSSD & SZ & KSČM & KDU-ČSL \\
 \hline Hlavní město Praha & 25 & 24 & 13 & 6 & 2 & 2 & 1 \\
 \hline Středočeský kraj & 23 & 22 & 10 & 7 & 1 & 3 & 1 \\
 \hline Jihočeský kraj & 13 & 13 & 5 & 4 & 1 & 2 & 1 \\
@@ -239,11 +174,8 @@ V tabulce 4 je ukázáno, jak by dopadly volby v roce 2006 dle navrhované metod
 \hline Zlínský kraj & 12 & 12 & 4 & 4 & 1 & 1 & 2 \\
 \hline Moravskoslezský kraj & 23 & 24 & 7 & 10 & 1 & 4 & 2 \\
 \hline Celkem & 200 & 200 & 76 & 69 & 13 & 27 & 15 \\
-\hline \end{tabular} \caption{Porovnání nové metody a současného systému} \end{table} \section{Závěr} 
-Cílem této práce bylo vytvořit popis současného volebního systému do Poslanecké sněmovny Parlamentu České republiky včetně teorie poměrného zastoupení, analyzovat současný systém a navrhnout jeho úpravy.
+\hline \end{tabular} \caption{Porovnání nové metody a současného systému} \end{table} \section{Závěr} Cílem této práce bylo vytvořit popis současného volebního systému do Poslanecké sněmovny Parlamentu České republiky včetně teorie poměrného zastoupení, analyzovat současný systém a navrhnout jeho úpravy.
 Každý volební systém je ale kompromisem, tedy i navrhovaný systém má své vady.
-Autor ale věří že jeho aplikace by vytvořila férovější volební prostředí a přitom zachovala krajovou příslušnost zvolených poslanců.
-Tento systém by měl být použitelný ve všech zemích kde není prioritou vyvážení hlasů jednotlivých částí, jako je tomu například v USA či Indii. Zde je totiž důležité i vyrovnávání počtu poslanců z jednotlivých částí země.
+Autor ale věří že jeho aplikace by vytvořila férovější volební prostředí a přitom zachovala krajovoupříslušnost zvolených poslanců.
+Tento systém by měl být aplikovatelný ve všech zemích kde není prioritou vyvážení hlasů jednotlivých částí, jako je tomu například v USA či Indii.
 \section*{Reference} \printbibliography[heading=none] \end{document}
-
-
