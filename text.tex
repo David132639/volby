@@ -85,7 +85,7 @@ Poměrné zastoupení tento problém řeší.
 Namísto otázky kdo získal nejvíce se ptá, kdo získal jakou část.
 Kandidáti se stejným názorem pak do voleb vstupují jako kandidující politická strana, voliči hlasují pro strany a každá strana pak dostane tolik poslanců, aby její procentuální zisk ve volbách co nejvíce odpovídal zisku mandátů.
 Otázka, jak provést rozdělení mandátů dle výsledků voleb bude hlavním předmětem zkoumání této práce.
-Nyní můžeme pro představu udělit poslance stranám (odpovídajícím názorům) A až E například tak, že za každých získaných N procent získá každá strana jednoho poslance, a N zvolíme tak, aby byl počet udělených poslanců správný (toto je později zmiňovaná d'Hondtova metoda).
+Nyní můžeme pro představu udělit poslance stranám (odpovídajícím názorům) A až E například tak, že za každých získaných N procent získá každá strana jednoho poslance, a N zvolíme tak, aby byl počet udělených poslanců správný (toto je později zmiňovaná D'Hondtova metoda).
 Pokud N=9,5\%, pak strany A, B a C dostanou po dvou poslancích a strany D a E po jednom.
 Zisky stran z hlediska poslanců jsou tedy 25\% pro A až C a 12.5\% pro D a E.
 Procenta sice výsledkům voleb přesně neodpovídají, ale jde o mnohem lepší reprezentaci než u většinového výsledku kde všechny poslance získalo A.
@@ -114,10 +114,10 @@ Zároveň při každém porovnávání dvou čísel předpokládejme ostrou nero
 Tyto metody fungují tak, že každá strana získává počet poslanců rovný zaokrouhlenému podílu hlasu které obdržela a proměnné Q.
 Tyto podíly jsou vždy všechny zaokrouhleny stejným způsobem, každá z metod v této skupině ale zaokrouhluje jinak.
 Q je určeno tak, aby celkový rozdělený počet mandátů byl roven počtu rozdělovaných mandátů.
-Dvě nejpoužívanější metody z této skupiny jsou d'Hondtova, která vždy zaokrouhluje dolů a Sainte-Lague, která zaokrouhluje dle běžných aritmetických pravidel zaokrouhlování.
-Tyto metody tvoří spektrum od d'Hondtovy metody , která vždy zaokrouhluje dolů, po Adamsovu, která vždy zaokrouhluje nahoru.
+Dvě nejpoužívanější metody z této skupiny jsou D'Hondtova, která vždy zaokrouhluje dolů a Sainte-Lague, která zaokrouhluje dle běžných aritmetických pravidel zaokrouhlování.
+Tyto metody tvoří spektrum od D'Hondtovy metody , která vždy zaokrouhluje dolů, po Adamsovu, která vždy zaokrouhluje nahoru.
 Všechny ostatní metody leží na spektru protože někdy zaokrouhlují nahoru a někdy dolů.\footnote{Například Dánská metoda zaokrouhluje nahoru, pokud číslo je méně než $\frac{2}{3}$ pod horní celou mezi čísla, 4.32 je tedy zaokrouhleno na 4, ale 4.34 je zaokrouhleno na 5.} Mezi tyto metody je podle Gallaghera chybně někdy řazena Imperaliho metoda.
-Ta funguje jako d'Hondtova metoda, ale od zisku každé strany odečítá jeden mandát.
+Ta funguje jako D'Hondtova metoda, ale od zisku každé strany odečítá jeden mandát.
 Jak ukázal, tato metoda ale nehledá poměrné rozdělení, ale jakési pseudo-poměrné, které má posílit pozici velkých stran.\autocite{GAL1}
 \newpage
 Matematicky lze tyto metody definovat následovně: 
@@ -128,12 +128,12 @@ Matematicky lze tyto metody definovat následovně:
 \item $p_{x}=[\dfrac{h_{x}}{Q}]$ kde $Q$ je reálné číslo zvolené tak, aby platilo: $$N=\sum_{n=1}^{N} (p_{n})$$
 \end{itemize}
 Q libovolně splňující podmínky vytvoří stejný výsledek.\autocite{GAL1}
-Pro d'Hondtovu metodu je $[ ]$ dolní celá část.
+Pro D'Hondtovu metodu je $[ ]$ dolní celá část.
 Pro metodu Sainte-Lague je $[ ]$ zaokrouhlení dle aritmetických pravidel.
 Pro Adamsovu metodu je $[ ]$ dolní celá část.
 
 Pro tyto metody existuje alternativní způsob výpočtu.
-Ten nejprve vysvětlíme pro d'Hondtovu metodu.
+Ten nejprve vysvětlíme pro D'Hondtovu metodu.
 Pro každou stranu je vypočítán podíl jejich hlasů postupně se všemi přirozenými čísly od 1 do počtu rozdělovaných mandátů.
 Tyto poměry každé strany určují jaké maximální Q jim zajistí daný počet mandátů (první poměr strany dává jeden mandát, druhý poměr dva mandáty...).
 Pokud tedy je za Q zvoleno N-té nejvyšší číslo mezi vypočtenými poměry všech stran, bude Q zvoleno správně.
@@ -180,14 +180,14 @@ Ale i větší oblasti poměrnost naruší, jak bylo ukázáno u vysvětlení po
 \section{Popis systému} Od roku voleb v roce 2002 se u nad s používá systém voleb v zcela oddělených krajích.
 Mandáty jsou nejprve rozděleny Hareovou kvótou mezi jednotlivé kraje, k tomu jsou použity součty platných hlasů v každém kraji.
 Poté jsou vyřazeny veškeré hlasy pro strany které nesplnily podmínky pro zisk mandátů, tedy nedosáhly \uv{pětiprocentní hranice}.
-V každém kraji je pak zcela nezávisle provedeno rozdělování mandátů dle hlasů odevzdaných v daném kraji podle d'Hondtovy metody.
+V každém kraji je pak zcela nezávisle provedeno rozdělování mandátů dle hlasů odevzdaných v daném kraji podle D'Hondtovy metody.
 \section{Poměrnost současného systému} V této části budeme zkoumat výsledky voleb z roku 2006.
 Data jsou převzata ze stránek Českého statistického úřadu.\autocite{CSU} Tyto volby totiž ukázaly některé zvláštní vlastností českého volebního systému.
 Výsledek voleb je ukázán v tabulce 1.
 \begin{table}[p]
 \catcode`\-=12
 \begin{tabular}{|c|c|c|c|c|c|c|c|} \hline \multirow{2}{*}{Strana} & \multicolumn{2}{|c|}{Skutečné Výsledky} & \multirow{2}{*}{Teoretické mandáty} & \multicolumn{4}{|c|}{Rozdělení dle různých metod} \\
-\cline{2-3} \cline{5-8} & Hlasy & Mandáty & & d'Hondt & Adams & Hare & Droop \\
+\cline{2-3} \cline{5-8} & Hlasy & Mandáty & & D'Hondt & Adams & Hare & Droop \\
 \hline ODS & 1892475 & 81 & 75.25 & 76 & 75 & 75 & 76 \\
 \hline ČSSD & 1728827 & 74 & 68.74 & 69 & 68 & 69 & 69 \\
 \hline SZ & 336487 & 6 & 13.38 & 13 & 14 & 14 & 13 \\
@@ -220,8 +220,8 @@ Slovensko se výše zmíněných problémů zbavilo tak, že jejich volby probí
 Jak bylo vidět výše, při celostátním rozdělování mandátů lze dosáhnout vysoké poměrnosti s prakticky libovolnou metodou dělení mandátů.
 Nevýhoda pro voliče je, že každý dostává kandidátní listinu o 150 kandidátech (i když to je dáno spíše optimismem politických stran než podobou systému) a nemá \uv{své} poslance.
 I když toto můžeme považovat za řešení problémů, podívejme se, jestli by bylo možné zachovat oblastní rozdělování mandátů a při tom vyřešit zmíněné problémy.
-\section{Jiný způsob dělení mandátu v krajích} d'Hondtova metoda není považována za nejvíce poměrnou.
-SL je v tomto ohledu hodnocena jako jedna z nejpoměrnějších metod.\autocite{BEN} Možným zlepšením situace je tedy zavedení této metody místo metody d'Hondtovy.
+\section{Jiný způsob dělení mandátu v krajích} D'Hondtova metoda není považována za nejvíce poměrnou.
+SL je v tomto ohledu hodnocena jako jedna z nejpoměrnějších metod.\autocite{BEN} Možným zlepšením situace je tedy zavedení této metody místo metody D'Hondtovy.
 Problémem je že v krajích jako je Karlovarský není rozdělení které by přesně odpovídalo rozdělení hlasů často vůbec možné.
 Strana s 10 procenty hlasů nemůže dostat nic bližšího svému zisku než 0 nebo 20 procent křesel.
 Pouhou změnou metody tedy problém řešit nelze, i když by ho mohla mírnit.
@@ -243,7 +243,7 @@ Zachovala by se příslušnost zvolených poslanců krajům, ale \uv{spravedliv�
 Tento postup má ale také své nevýhody.
 Problém dělení malého počtu mandátů mezi strany se proměnil mezi dělení malého počtu mandátů mezi kraje.
 To už ale neovlivňuje výsledek voleb tak jak ho známe, tedy rozdělení křesel stranám.
-V tabulce 4 je ukázáno, jak by dopadly volby v roce 2006 dle navrhované metody, pokud k dělení mandátu mezi strany bude využito metody d'Hondtovy (současná metoda) a mezi kraje metody Saint-Lague. Je vidět, že je téměř dodrženo dělení mandátů mezi kraje, ale i spravedlivé rozdělení mandátu dle tabulky 1. 
+v tabulce 4 je ukázáno, jak by dopadly volby v roce 2006 dle navrhované metody, pokud k dělení mandátu mezi strany bude využito metody D'Hondtovy (současná metoda) a mezi kraje metody Saint-Lague. Je vidět, že je téměř dodrženo dělení mandátů mezi kraje, ale i spravedlivé rozdělení mandátu dle tabulky 1. 
 \begin{table} \begin{tabular}{|c|c|c|c|c|c|c|c|} 
 \hline Kraj & Současný & Navrhovaný & ODS & ČSSD & SZ & KSČM & KDU-ČSL \\
 \hline Hlavní město Praha & 25 & 24 & 13 & 6 & 2 & 2 & 1 \\
