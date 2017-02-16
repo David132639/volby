@@ -108,7 +108,7 @@ století došlo k dlouhodobému ustálení metody výpočtu.
 Jak uvádí Carstair, v Evropě se tématu začíná věnovat pozornost až na konci 19.
 století.
 V roce 1885 probíhá v Antverpách konference na téma poměrného volebního systému.
-V následujících letech začnou státy západní Evropy postupně tento nový systém využívat, zde již ale nedochází k takovým kontroverzím.
+V následujících letech začínají státy západní Evropy postupně tento nový systém zavádět, zde již ale nedochází k takovým kontroverzím.
 V roce 1920 již využívá poměrného systému většina západní Evropy.\autocite{BOO} 
 \chapter{Teoretický popis metod dělení mandátu}
 \section{Jednotlivé metody poměrného zastoupení}
@@ -117,9 +117,9 @@ Přestože většina následujících metod byla prvně vymyšlená americkými 
 Zároveň při každém porovnávání dvou čísel předpokládejme ostrou nerovnost, metody řešení rovnosti budou popsány ke konci této kapitoly.
 \subsection{Metody nejvyšších průměrů}
 První skupinou metod dělení mandátu jsou takzvané metody nejvyšších průměrů.
-Tyto metody fungují tak, že každá strana získává počet poslanců rovný zaokrouhlenému podílu hlasu které obdržela a proměnné Q.
+Tyto metody fungují tak, že každá strana získává počet poslanců rovný zaokrouhlenému podílu hlasu které obdržela a proměnné $Q$.
 Tyto podíly jsou vždy všechny zaokrouhleny stejným způsobem, každá z metod v této skupině ale zaokrouhluje jinak.
-Q je určeno tak, aby celkový rozdělený počet mandátů byl roven počtu rozdělovaných mandátů.
+$Q$ je určeno tak, aby celkový rozdělený počet mandátů byl roven počtu rozdělovaných mandátů.
 Dvě nejpoužívanější metody z této skupiny jsou D'Hondtova, která vždy zaokrouhluje dolů a Sainte-Lague, která zaokrouhluje dle běžných aritmetických pravidel zaokrouhlování.
 Tyto metody tvoří spektrum od D'Hondtovy metody , která vždy zaokrouhluje dolů, po Adamsovu, která vždy zaokrouhluje nahoru.
 Všechny ostatní metody leží na spektru protože někdy zaokrouhlují nahoru a někdy dolů.\footnote{Například Dánská metoda zaokrouhluje nahoru, pokud číslo je méně než $\frac{2}{3}$ pod horní celou mezi čísla, 4.32 je tedy zaokrouhleno na 4, ale 4.34 je zaokrouhleno na 5.}
@@ -130,21 +130,21 @@ Jak ukázal, tato metoda ale nehledá poměrné rozdělení, ale jakési pseudo-
 Matematicky lze tyto metody definovat následovně: 
 \begin{itemize}
 \item strany ve volbách jsou očíslované $1$ až $n$ a dělí si $N$ křesel
-\item $h_{x}$ je počet hlasů strany $x$ \item $p_{x}$ je počet získaných poslanců stranou x
-\item $[ ]$ je zaokrouhlení dle daného postupu
-\item $p_{x}=\left[\dfrac{h_{x}}{Q}\right]$ kde $Q$ je reálné číslo zvolené tak, aby platilo: $$N=\sum_{i=1}^{n} (p_{i})$$
+\item $h_{x}$ je počet hlasů strany $x$ \item $p_{x}$ je počet získaných poslanců stranou $x$
+\item $\lbrace \rbrace$ je zaokrouhlení dle daného postupu
+\item $p_{x}=\left\lbrace\dfrac{h_{x}}{Q}\right\rbrace$ kde $Q$ je reálné číslo zvolené tak, aby platilo: $$N=\sum_{i=1}^{n} p_{i}$$
 \end{itemize}
-Q libovolně splňující podmínky vytvoří stejný výsledek.\autocite{GAL1}
-Pro D'Hondtovu metodu je $[ ]$ dolní celá část, pro metodu Sainte-Lague je $[ ]$ zaokrouhlení dle aritmetických pravidel, pro Adamsovu metodu je $[ ]$ dolní celá část...
+$Q$ libovolně splňující podmínky vytvoří stejný výsledek.\autocite{GAL1}
+Pro D'Hondtovu metodu je $\lbrace \rbrace$ dolní celá část, pro metodu Sainte-Lague je to zaokrouhlení dle aritmetických pravidel, pro Adamsovu metodu je to dolní celá část...
 
 Pro tyto metody existuje alternativní způsob výpočtu.
 Ten nejprve vysvětlíme pro D'Hondtovu metodu.
 Pro každou stranu je vypočítán podíl jejich hlasů postupně se všemi přirozenými čísly od 1 do počtu rozdělovaných mandátů.
-Tyto poměry každé strany určují, jaké maximální Q jim zajistí daný počet mandátů (první poměr strany dává jeden mandát, druhý poměr dva mandáty...).
-Pokud tedy je za Q zvoleno N-té nejvyšší číslo mezi vypočtenými poměry všech stran, bude Q zvoleno správně.
-Q ale můžeme z výpočtu vypustit úplně, neboť víme že pokud každá strana dostane jeden mandát za každý její vypočtený poměr vyšší než nebo roven N-tému nejvyššímu číslu, rozděleno bude N křesel.
-Podobně lze vypočítat rozdělení Sainte-Lague pomocí řady $0{,}5; 1{,}5; 2{,}5...$.
-To proto, že počet hlasů strany dosahuje alespoň dvojnásobku Q, neboli je počet jejich hlasů vydělený $0{,}5$ větší než Q, pak díky zaokrouhlení získá jeden mandát.
+Tyto poměry každé strany určují, jaké maximální $Q$ jim zajistí daný počet mandátů (první poměr strany dává jeden mandát, druhý poměr dva mandáty...).
+Pokud tedy je za $Q$ zvoleno $N$-té nejvyšší číslo mezi vypočtenými poměry všech stran, bude $Q$ zvoleno správně.
+$Q$ ale můžeme z výpočtu vypustit úplně, neboť víme že pokud každá strana dostane jeden mandát za každý její vypočtený poměr vyšší než nebo roven $N$-tému nejvyššímu číslu, rozděleno bude $N$ křesel.
+Podobně lze vypočítat rozdělení Sainte-Lague pomocí řady $0{,}5; 1{,}5; 2{,}5...$
+To proto, že počet hlasů strany dosahuje alespoň dvojnásobku $Q$, neboli je počet jejich hlasů vydělený $0{,}5$ větší než $Q$, pak díky zaokrouhlení získá jeden mandát.
 Pokud to splňuje i po vydělení $1{,}5$ pak dostane dva...
 Poměry v řadě, kterou je počet hlasů dělen, odpovídají hranicím zaokrouhlení.
 \subsection{Metody největšího zbytku} 
@@ -161,9 +161,9 @@ Tyto kvóty se ale používají zřídka.
 Rozlišovací vlastností těchto systémů je způsob určení kvóty.
 Kvóta se vždy určuje dle celkového součtu hlasů a počtu volených zastupitelů.
 Minimální kvótu dle běžných definic lze definovat snadno, nesmí dovolit zisk více mandátů než má být rozděleno.
-Tato kvóta se nazývá Droopova, a je definována jako první přirozené číslo větší než $\dfrac{H}{N+1}$ kde $H$ je součet všech hlasů a $N$ počet rozdělovaných mandátů.
+Tato kvóta se nazývá Droopova, a je definována jako první přirozené číslo větší než $\frac{H}{N+1}$ kde $H$ je součet všech hlasů a $N$ počet rozdělovaných mandátů.
 Tuto kvótu lze odvodit následovně: Celkově může být (bez dorozdělování dle zbytku) rozděleno maximálně tolik mandátů, kolikrát se kvóta celá vejde do celkového počtu hlasů.
-Pro kvótu $\dfrac{H}{N+1}$ se kvóta vejde do celkového počtu hlasů přesně $N+1$ krát, pokud se kvóta zvýší, už se do celkového počtu hlasů $N+1$ krát nevejde, vejde se tedy maximálně $N$, maximálně může být rozděleno $N$ mandátů.
+Pro kvótu $\frac{H}{N+1}$ se kvóta vejde do celkového počtu hlasů přesně $N+1$ krát, pokud se kvóta zvýší, už se do celkového počtu hlasů $N+1$ krát nevejde, vejde se tedy maximálně $N$, maximálně může být rozděleno $N$ mandátů.
 
 Druhou často používanou kvótou je kvóta Hareova, někdy také nazývaná přirozená kvóta.
 Ta je rovna poměru celkového počtu hlasů a počtu udělovaných mandátů.
@@ -242,7 +242,7 @@ Výsledek je vidět v tabulkách 2 a 3.
 \end{center}
 \end{table}
 Zde je jasně vidět, jak dělení mandátů v krajích zásadně ovlivňuje výsledky voleb.
-To je špatné obzvláště pro malé strany které pak mají problém i přes překonání umělé hranice pro vstup nějaké mandáty získat.
+To je špatné obzvláště pro malé strany, které pak mají problém i přes překonání umělé hranice pro vstup nějaké mandáty získat.
 \chapter{Možné úpravy a závěr}
 \section{Celostátní rozdělování}
 Slovensko se výše zmíněných problémů zbavilo tak, že jejich volby probíhají celostátně.
