@@ -60,7 +60,7 @@ Podíl & 4.7  & 1.6  & 1.59 & 1.2  & 0.6 & 0.31 \\ \hline
 
 \begin{frame}{Počátky poměrných systémů}
 \begin{center}
-%\includegraphics[scale=0.2]{zdroje/const.jpg}
+\includegraphics[scale=0.2]{zdroje/const.jpg}
 \end{center}
 \end{frame}
 
@@ -69,7 +69,7 @@ Podíl & 4.7  & 1.6  & 1.59 & 1.2  & 0.6 & 0.31 \\ \hline
 \begin{itemize}
 \item Předem zvolené: $Q$
 \item Počet hlasu pro stranu: $H_{x}$
-\item Zisk mandátů: $\left\lfloor\dfrac{H_{x}}{Q}\right\rfloor$
+\item Zisk mandátů: $\left\lfloor\frac{H_{x}}{Q}\right\rfloor$
 \end{itemize}
 \end{frame}
 
@@ -77,7 +77,7 @@ Podíl & 4.7  & 1.6  & 1.59 & 1.2  & 0.6 & 0.31 \\ \hline
 \begin{itemize}
 \item Počet rozdělovaných mandátů $N$
 \item $Q=\dfrac{H_{c}}{N}$
-\item Zisk mandátů: $\left\lfloor\dfrac{H_{x}}{Q}\right\rfloor+\{0;1\}$
+\item Zisk mandátů: $\left\lfloor\frac{H_{x}}{Q}\right\rfloor+\{0;1\}$
 \end{itemize}
 \end{frame}
 
@@ -129,7 +129,7 @@ C & 100 & 1,426 & 2 & 1.571 & 1 \\
 \begin{frame}{Metody nejvyšších průměrů}
 \begin{itemize}
 \item Počet rozdělovaných mandátů $N$
-\item Zisk mandátů: $\left\langle\dfrac{H_{x}}{Q}\right\rangle$
+\item Zisk mandátů: $\left\langle\frac{H_{x}}{Q}\right\rangle$
 \item $\langle$\hspace{0.15cm}$\rangle$ je zaokrouhlení.
 \item $Q$ je určeno tak, aby bylo rozděleno \\ právě $N$ křesel.
 \end{itemize}
@@ -137,10 +137,10 @@ C & 100 & 1,426 & 2 & 1.571 & 1 \\
 
 \begin{frame}{MNP 2 -- spektrum}
 \begin{itemize}
-\item D'Hondtova metoda $\left\lfloor\dfrac{H_{x}}{Q}\right\rfloor$
-\item Metoda Sainte-Lague $\left\lfloor\dfrac{H_{x}}{Q}\right\rfloor$
-\item Adamsova Metoda $\left\lceil\dfrac{H_{x}}{Q}\right\rceil$
-\item Metoda Huntington-Hill: na $(A;B)$ zaokrouhluje nahoru pro $x>\sqrt{A\cdot B}$
+\item D'Hondtova metoda $\left\lfloor\frac{H_{x}}{Q}\right\rfloor$
+\item Metoda Sainte-Lague $\left\lfloor\frac{H_{x}}{Q}\right\rfloor$
+\item Adamsova Metoda $\left\lceil\frac{H_{x}}{Q}\right\rceil$
+\item Metoda Huntington-Hill: zaokrouhlení dle geometrického průměru.
 \end{itemize}
 \end{frame}
 
@@ -175,7 +175,7 @@ C & 100 & 1,426 & 2 & 1.571 & 1 \\
 \end{center}
 \end{frame}
 
-\begin{frame}{Hypotetické volby 2}
+\begin{frame}{Hypotetické volby}
 \begin{itemize}
 \item 200 poslanců
 \item Tři strany A, B, C
@@ -236,16 +236,37 @@ SR & 98 & 90 & 12\\ \hline
 UK/USA & 200 & 0 & 0\\ \hline
 \end{tabular}
 \end{center} 
-V roce 2006 získala Strana zelených $6,29\%$ hlasu ale jen $3\%$ poslanců. 
+V roce 2006 opravdu získala Strana zelených $6{,}29\%$ hlasu ale jen $3\%$ poslanců. 
 \textbf{Jak je to možné?}
 \end{frame}
 
 \begin{frame}{Kraje}
-Obrazek Kraju !!!!!!!!!!!!!!!!!!!!!!
+\includegraphics[scale=0.1]{zdroje/kraje.png}
 \end{frame}
 
-\begin{frame}{Kraje -- priklad}
-
+\begin{frame}{Karlovarský kraj (5) 2006 a 2013}
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Strana  & Zisk    \\ \hline
+ODS     & 38,33\% \\ \hline
+ČSSD    & 34,98\% \\ \hline
+SZ      & 7,17\%  \\ \hline
+KSČM    & 15,84\% \\ \hline
+KDU-ČSL & 3,68\%  \\ \hline
+\end{tabular}
+\begin{tabular}{|c|c|}
+\hline
+Strana  & Zisk    \\ \hline
+ČSSD    & 24,28\% \\ \hline
+TOP09   & 11,47\% \\ \hline
+ODS     & 7,65\%  \\ \hline
+KDU-ČSL & 3,82\%  \\ \hline
+Úsvit   & 9,48\%  \\ \hline
+ANO2011 & 24,25\% \\ \hline
+KSČM    & 19,02\% \\ \hline
+\end{tabular}
+\end{center}
 \end{frame}
 
 \begin{frame}{Kraje -- reseni}
