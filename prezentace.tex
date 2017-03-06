@@ -90,32 +90,24 @@ Jak je to možné?
 
 \begin{frame}{Počátky poměrných systémů}
 \begin{center}
-\includegraphics[scale=0.2]{zdroje/const.jpg}
+%\includegraphics[scale=0.2]{zdroje/const.jpg}
 \end{center}
 \end{frame}
 
-\begin{frame}{1.}
+\begin{frame}{Bez určeného počtu}
 %Q"9000/11000		O1"20000	O2"100000
 \begin{itemize}
 \item Předem zvolené $Q$
-\item Počet obyvatel označíme státu $O_{x}$
-\item Zisk mandátů: $\left\lfloor\dfrac{O_{x}}{Q}\right\rfloor$
+\item Počet hlasu pro stranu $H_{x}$
+\item Zisk mandátů: $\left\lfloor\dfrac{H_{x}}{Q}\right\rfloor$
 \end{itemize}
 \end{frame}
 
-\begin{frame}{2.}
-%Q"13000/14000
-\begin{itemize}
-\item Zaokrouhlební dle běžných pravidel
-\item Zisk mandátů: $\left[\dfrac{O_{x}}{Q}\right]$
-\end{itemize}
-\end{frame}
-
-\begin{frame}{3. -- metoda nejvyšších zbytků}
+\begin{frame}{Metoda nejvyšších zbytků}
 \begin{itemize}
 \item Počet rozdělovaných mandátů $N$
-\item $Q=\dfrac{O_{c}}{N}$
-\item Zisk mandátů: $\left\lfloor\dfrac{O_{x}}{Q}\right\rfloor+\{0;1\}$
+\item $Q=\dfrac{H_{c}}{N}$
+\item Zisk mandátů: $\left\lfloor\dfrac{H_{x}}{Q}\right\rfloor+\{0;1\}$
 \end{itemize}
 \end{frame}
 
@@ -164,7 +156,14 @@ C & 200 & 1,426 & 2 & 1.571 & 1 \\
 \end{center}
 \end{frame}
 
-
+\begin{frame}{Metoda nejvyšších průměrů}
+\begin{itemize}
+\item Počet rozdělovaných mandátů $N$
+\item Zisk mandátů: $\left\{\dfrac{H_{x}}{Q}\right\}$
+\item $\{$\hspace{0.25cm}$\{$
+\item $Q$ je určeno tak, aby bylo rozděleno právě $N$ křesel.
+\end{itemize}
+\end{frame}
 
 https://www.census.gov/population/apportionment/about/history.html
 
